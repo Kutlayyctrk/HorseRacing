@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HorseRacing.Entities
 {
-    public class DateDay
+    public class RaceDay
     {
         public int Id { get; set; }
         public string Name { get; set; }
