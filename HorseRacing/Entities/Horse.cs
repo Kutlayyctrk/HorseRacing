@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace HorseRacing.Entities
 {
-    public class Horse
+    public class Horse : BaseEntity
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+      
         public int Age { get; set; }
         public string Region { get; set; }
         public Jockey Jockey { get; set; } // atın üzerinde ki jokeyi direkt jokey class'ından alıyorz

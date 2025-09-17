@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace HorseRacing.Entities
 {
-    public class Race
+    public class Race :BaseEntity
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+       
         public List<Horse> Horses { get; set; } //yarış içindeki atlar. 1 yarışta birden fazla at olabilir.
 
         public RaceCard RaceCard { get; set; } //

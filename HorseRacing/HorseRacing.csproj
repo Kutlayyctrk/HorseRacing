@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\RaceDay.cs" />
     <Compile Include="Entities\Horse.cs" />
     <Compile Include="Entities\Jockey.cs" />

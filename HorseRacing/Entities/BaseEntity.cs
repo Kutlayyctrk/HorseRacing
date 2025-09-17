@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace HorseRacing.Entities
 {
-    public class Jockey :BaseEntity
+    public abstract class BaseEntity
     {
-        
-        public int Age { get; set; }
-
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }
