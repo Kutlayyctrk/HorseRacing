@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HorseRacing.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,9 @@ namespace HorseRacing
         public Form1()
         {
             InitializeComponent();
+            
         }
 
-        
+       
     }
 }
