@@ -9,6 +9,11 @@ namespace HorseRacing.Entities
 {
     public class RaceDay :IBaseEntites
     {
+        public RaceDay()
+        {
+            Id = ++counter;
+        }
+        public static int counter= 0;
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime Date { get; set; } //tarih

@@ -9,6 +9,18 @@ namespace HorseRacing.Entities
 {
     public class Race : IBaseEntites
     {
+        public Race(string name, List<Horse> horse)
+        {
+            Id = ++counter;
+
+        }
+        public Race()
+        {
+
+        }
+        
+
+        public static int counter = 0;
         public int Id { get; set; }
         public string Name { get; set; }
         public List<Horse> Horses { get; set; } //yarış içindeki atlar. 1 yarışta birden fazla at olabilir.

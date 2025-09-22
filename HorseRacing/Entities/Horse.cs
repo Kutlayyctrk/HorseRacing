@@ -9,6 +9,15 @@ namespace HorseRacing.Entities
 {
     public class Horse : IBaseEntites
     {
+        public Horse(string name,int age, string region, Jockey jokey)
+        {
+            Name = name;
+            Age = age;
+            Region = region;
+            Jockey = jokey;
+            Id = ++counter;
+        }
+        public static int counter = 0;
 
         public int Id { get; set; }
         public string Name { get; set; }
