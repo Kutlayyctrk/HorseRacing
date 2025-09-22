@@ -24,17 +24,19 @@ namespace HorseRacing
         }
         List<Horse> Horses = new List<Horse>();
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             Horse horse = new Horse(TxtHorseName.Text, Convert.ToInt32(TxtHorseAge.Text), TxtHorseRegion.Text, (cmbJockey.SelectedItem as Jockey));
             Horses.Add(horse);
         }
-
         private void BtnRace_Click(object sender, EventArgs e)
         {
-            Form3 f3=new Form3(Horses);
+            Form3 f3 = new Form3(Horses);
             f3.ShowDialog();
             this.Close();
         }
+
     }
 }

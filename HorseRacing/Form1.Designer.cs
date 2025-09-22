@@ -76,7 +76,7 @@
             this.BtnJockey.TabIndex = 2;
             this.BtnJockey.Text = "Jokey Oluştur";
             this.BtnJockey.UseVisualStyleBackColor = true;
-            this.BtnJockey.Click += new System.EventHandler(this.button1_Click);
+            this.BtnJockey.Click += new System.EventHandler(this.BtnJockey_Click);
             // 
             // BtnHorse
             // 
@@ -86,7 +86,7 @@
             this.BtnHorse.TabIndex = 3;
             this.BtnHorse.Text = "At Oluşturma Ekranı";
             this.BtnHorse.UseVisualStyleBackColor = true;
-            this.BtnHorse.Click += new System.EventHandler(this.button2_Click);
+            this.BtnHorse.Click += new System.EventHandler(this.BtnHorse_Click);
             // 
             // Form1
             // 
@@ -101,7 +101,6 @@
             this.Controls.Add(this.TxtJokeyName);
             this.Name = "Form1";
             this.Text = "Jokey Oluştur";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

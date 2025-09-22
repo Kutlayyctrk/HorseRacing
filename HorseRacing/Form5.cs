@@ -23,14 +23,14 @@ namespace HorseRacing
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnRaceList_Click(object sender, EventArgs e)
         {
-            RaceDay raceDay=new RaceDay();
+            RaceDay raceDay = new RaceDay();
 
             {
-                raceDay.Name=TxtRaceDayName.Text;
-                raceDay.Date=DTPRaceDay.Value;
-                raceDay.RaceCards=CmbRaceCard.SelectedItem as List<RaceCard>;
+                raceDay.Name = TxtRaceDayName.Text;
+                raceDay.Date = DTPRaceDay.Value;
+                raceDay.RaceCards = CmbRaceCard.SelectedItem as List<RaceCard>;
             }
             LstRaceDay.Items.Add(raceDay);
         }
