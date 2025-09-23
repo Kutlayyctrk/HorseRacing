@@ -76,11 +76,18 @@
     <Compile Include="CreateRaceDay.Designer.cs">
       <DependentUpon>CreateRaceDay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\AllData.cs" />
     <Compile Include="Entities\RaceDay.cs" />
     <Compile Include="Entities\Horse.cs" />
     <Compile Include="Entities\Jockey.cs" />
     <Compile Include="Entities\Race.cs" />
     <Compile Include="Entities\RaceCard.cs" />
+    <Compile Include="Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IBaseEntites.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -104,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateRaceDay.resx">
       <DependentUpon>CreateRaceDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

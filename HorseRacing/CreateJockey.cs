@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace HorseRacing
 {
-    
+
     public partial class CreateJockey : Form
     {
         private List<Jockey> _jockeys;
@@ -23,11 +23,29 @@ namespace HorseRacing
 
         private void BtnCreateJockey_Click(object sender, EventArgs e)
         {
-            Jockey jockey = new Jockey(TxtJockeyName.Text, Convert.ToInt32(TxtJockeyAge.Text));
-            _jockeys.Add(jockey);
-            TxtJockeyAge.Text = "";
-            TxtJockeyName.Text = "";
-            MessageBox.Show($"{jockey.Name.ToString()} Adında bir Jokey Oluşturuldu");
+            try
+            {
+                Jockey jockey = new Jockey(TxtJockeyName.Text, Convert.ToInt32(TxtJockeyAge.Text));
+                _jockeys.Add(jockey);
+                TxtJockeyAge.Text = "";
+                TxtJockeyName.Text = "";
+                MessageBox.Show($"{jockey.Name.ToString()} Adında bir Jokey Oluşturuldu");
+                
+
+
+
+
+
+            }
+           
+            catch (FormatException)
+            {
+                MessageBox.Show("Jokey Yaşı bir sayı olabilir.");
+                return;
+
+            }
+
+
         }
     }
 }

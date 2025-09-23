@@ -33,11 +33,13 @@
             this.BtnCreateHorse = new System.Windows.Forms.Button();
             this.BtnCreateRace = new System.Windows.Forms.Button();
             this.BtnCreateRaceDay = new System.Windows.Forms.Button();
+            this.BtnInformation = new System.Windows.Forms.Button();
+            this.LblInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnCreateJockey
             // 
-            this.BtnCreateJockey.Location = new System.Drawing.Point(152, 60);
+            this.BtnCreateJockey.Location = new System.Drawing.Point(45, 74);
             this.BtnCreateJockey.Name = "BtnCreateJockey";
             this.BtnCreateJockey.Size = new System.Drawing.Size(137, 65);
             this.BtnCreateJockey.TabIndex = 0;
@@ -47,7 +49,7 @@
             // 
             // BtnCreateRaceCard
             // 
-            this.BtnCreateRaceCard.Location = new System.Drawing.Point(581, 60);
+            this.BtnCreateRaceCard.Location = new System.Drawing.Point(523, 74);
             this.BtnCreateRaceCard.Name = "BtnCreateRaceCard";
             this.BtnCreateRaceCard.Size = new System.Drawing.Size(137, 65);
             this.BtnCreateRaceCard.TabIndex = 0;
@@ -57,7 +59,7 @@
             // 
             // BtnCreateHorse
             // 
-            this.BtnCreateHorse.Location = new System.Drawing.Point(295, 60);
+            this.BtnCreateHorse.Location = new System.Drawing.Point(198, 74);
             this.BtnCreateHorse.Name = "BtnCreateHorse";
             this.BtnCreateHorse.Size = new System.Drawing.Size(137, 65);
             this.BtnCreateHorse.TabIndex = 0;
@@ -67,7 +69,7 @@
             // 
             // BtnCreateRace
             // 
-            this.BtnCreateRace.Location = new System.Drawing.Point(438, 60);
+            this.BtnCreateRace.Location = new System.Drawing.Point(694, 74);
             this.BtnCreateRace.Name = "BtnCreateRace";
             this.BtnCreateRace.Size = new System.Drawing.Size(137, 65);
             this.BtnCreateRace.TabIndex = 0;
@@ -77,7 +79,7 @@
             // 
             // BtnCreateRaceDay
             // 
-            this.BtnCreateRaceDay.Location = new System.Drawing.Point(724, 60);
+            this.BtnCreateRaceDay.Location = new System.Drawing.Point(359, 74);
             this.BtnCreateRaceDay.Name = "BtnCreateRaceDay";
             this.BtnCreateRaceDay.Size = new System.Drawing.Size(137, 65);
             this.BtnCreateRaceDay.TabIndex = 0;
@@ -85,11 +87,31 @@
             this.BtnCreateRaceDay.UseVisualStyleBackColor = true;
             this.BtnCreateRaceDay.Click += new System.EventHandler(this.BtnCreateRaceDay_Click);
             // 
+            // BtnInformation
+            // 
+            this.BtnInformation.Location = new System.Drawing.Point(359, 159);
+            this.BtnInformation.Name = "BtnInformation";
+            this.BtnInformation.Size = new System.Drawing.Size(137, 65);
+            this.BtnInformation.TabIndex = 1;
+            this.BtnInformation.Text = "Bilgi Görüntüle";
+            this.BtnInformation.UseVisualStyleBackColor = true;
+            this.BtnInformation.Click += new System.EventHandler(this.BtnInformation_Click);
+            // 
+            // LblInfo
+            // 
+            this.LblInfo.BackColor = System.Drawing.SystemColors.Info;
+            this.LblInfo.Location = new System.Drawing.Point(61, 235);
+            this.LblInfo.Name = "LblInfo";
+            this.LblInfo.Size = new System.Drawing.Size(534, 84);
+            this.LblInfo.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1069, 655);
+            this.ClientSize = new System.Drawing.Size(873, 353);
+            this.Controls.Add(this.LblInfo);
+            this.Controls.Add(this.BtnInformation);
             this.Controls.Add(this.BtnCreateRace);
             this.Controls.Add(this.BtnCreateRaceDay);
             this.Controls.Add(this.BtnCreateRaceCard);
@@ -97,6 +119,7 @@
             this.Controls.Add(this.BtnCreateJockey);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -108,5 +131,7 @@
         private System.Windows.Forms.Button BtnCreateHorse;
         private System.Windows.Forms.Button BtnCreateRace;
         private System.Windows.Forms.Button BtnCreateRaceDay;
+        private System.Windows.Forms.Button BtnInformation;
+        private System.Windows.Forms.Label LblInfo;
     }
 }

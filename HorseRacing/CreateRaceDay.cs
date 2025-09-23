@@ -17,46 +17,30 @@ namespace HorseRacing
         public CreateRaceDay(List<RaceCard> raceCards, List<RaceDay> raceDays)
         {
             InitializeComponent();
-            CmbRaceCards.DisplayMember = "Name";
-            foreach (RaceCard raceCard in raceCards)
-            {
-                CmbRaceCards.Items.Add(raceCard);
-            }
+
             _raceDays = raceDays;
         }
 
-        private void BtnAddRaceCard_Click(object sender, EventArgs e)
-        {
-            LstRaceCards.DisplayMember = "Name";
-            if (CmbRaceCards.SelectedItem != null)
-            {
-                LstRaceCards.Items.Add(CmbRaceCards.SelectedItem);
-            }
-        }
 
-        private void BtnDeleteRaceCard_Click(object sender, EventArgs e)
-        {
-            if (LstRaceCards.SelectedItem != null)
-            {
-                LstRaceCards.Items.Remove(LstRaceCards.SelectedItem);
-            }
-        }
+
+
 
         private void BtnCreateRaceDay_Click(object sender, EventArgs e)
         {
-            List<RaceCard> selectedRaceCards = new List<RaceCard>();
-            foreach (RaceCard raceCard in selectedRaceCards)
+            if(TxtRaceDayName.Text==null)
             {
-                selectedRaceCards.Add(raceCard);
+                MessageBox.Show("Yarış İsmi Kısmı Boş Bırakılamaz.");
+                return;
             }
             RaceDay raceDay = new RaceDay();
             {
                 raceDay.Name = TxtRaceDayName.Text;
                 raceDay.Date = DTPRaceDay.Value;
-                raceDay.RaceCards = selectedRaceCards;
+
 
             }
             _raceDays.Add(raceDay);
+            MessageBox.Show($"{raceDay.Name.ToString()} Adında Bir Yarış Günü Oluşturuldu.");
         }
     }
 }

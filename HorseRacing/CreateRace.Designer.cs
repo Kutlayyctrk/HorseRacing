@@ -76,7 +76,7 @@
             // CmbRaceCard
             // 
             this.CmbRaceCard.FormattingEnabled = true;
-            this.CmbRaceCard.Location = new System.Drawing.Point(139, 168);
+            this.CmbRaceCard.Location = new System.Drawing.Point(139, 175);
             this.CmbRaceCard.Name = "CmbRaceCard";
             this.CmbRaceCard.Size = new System.Drawing.Size(100, 24);
             this.CmbRaceCard.TabIndex = 2;
@@ -84,7 +84,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 176);
+            this.label3.Location = new System.Drawing.Point(33, 183);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 16);
             this.label3.TabIndex = 1;
@@ -92,7 +92,7 @@
             // 
             // BtnCreateRace
             // 
-            this.BtnCreateRace.Location = new System.Drawing.Point(139, 224);
+            this.BtnCreateRace.Location = new System.Drawing.Point(148, 263);
             this.BtnCreateRace.Name = "BtnCreateRace";
             this.BtnCreateRace.Size = new System.Drawing.Size(100, 37);
             this.BtnCreateRace.TabIndex = 3;
