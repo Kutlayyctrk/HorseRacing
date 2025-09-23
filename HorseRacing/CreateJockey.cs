@@ -25,6 +25,9 @@ namespace HorseRacing
         {
             Jockey jockey = new Jockey(TxtJockeyName.Text, Convert.ToInt32(TxtJockeyAge.Text));
             _jockeys.Add(jockey);
+            TxtJockeyAge.Text = "";
+            TxtJockeyName.Text = "";
+            MessageBox.Show($"{jockey.Name.ToString()} Adında bir Jokey Oluşturuldu");
         }
     }
 }

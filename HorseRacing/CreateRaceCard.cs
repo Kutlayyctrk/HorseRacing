@@ -14,6 +14,7 @@ namespace HorseRacing
     public partial class CreateRaceCard : Form
     {
         private List<RaceCard> _raceCards;
+        private List<Race> _races;
         public CreateRaceCard(List<Race> races, List<RaceDay> raceDays, List<RaceCard> raceCards)
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace HorseRacing
                 CmbRaceDays.Items.Add(raceDay);
             }
             _raceCards = raceCards;
+            _races=races;
         }
 
         private void BtnAddRace_Click(object sender, EventArgs e)

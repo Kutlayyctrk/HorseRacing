@@ -33,11 +33,19 @@ namespace HorseRacing
 
         private void BtnAddHorse_Click(object sender, EventArgs e)
         {
+
+
             LstSelectedHorse.DisplayMember = "Name";
             if (CmbHorse.SelectedItem != null)
             {
                 LstSelectedHorse.Items.Add(CmbHorse.SelectedItem);
             }
+            else
+            {
+                MessageBox.Show("Eklemek için Bir At Seçmesilisiniz.");
+                return;
+            }
+
         }
 
         private void BtnDeleteHorse_Click(object sender, EventArgs e)
@@ -46,24 +54,50 @@ namespace HorseRacing
             {
                 LstSelectedHorse.Items.Remove(LstSelectedHorse.SelectedItem);
             }
+            else
+            {
+                MessageBox.Show("Silmek İçin Bir At Seçmelisiniz.");
+            }
+
         }
 
         private void BtnCreateRace_Click(object sender, EventArgs e)
         {
-            List<Horse> selectedHorse = new List<Horse>();
-            foreach (Horse horse in LstSelectedHorse.Items)
-            {
-                selectedHorse.Add(horse);
-            }
 
-            Race race = new Race();
-            {
-                race.Name = TxtRaceName.Text;
-                race.RaceCard = CmbRaceCard.SelectedItem as RaceCard;
-                race.Horses = selectedHorse;
 
+           if(CmbRaceCard.SelectedItem == null||LstSelectedHorse.Items.Count<1)
+            {
+                if(CmbRaceCard.SelectedItem==null)
+                {
+                    MessageBox.Show("Önce Bir Bülten Seçmelisiniz");
+                }
+                else if(LstSelectedHorse.Items.Count>1)
+                {
+                    MessageBox.Show("Yarış içerisine Atları eklemelisiniz");
+                }
+                else
+                {
+                    List<Horse> selectedHorse = new List<Horse>();
+                    foreach (Horse horse in LstSelectedHorse.Items)
+                    {
+                        selectedHorse.Add(horse);
+                    }
+
+                    Race race = new Race();
+                    {
+                        race.Name = TxtRaceName.Text;
+                        race.RaceCard = CmbRaceCard.SelectedItem as RaceCard;
+                        race.Horses = selectedHorse;
+
+                    }
+                    _races.Add(race);
+                    TxtRaceName.Text = "";
+                    CmbHorse.Text="";
+                    CmbRaceCard.Text="";
+                    LstSelectedHorse.Text="";
+                    MessageBox.Show($"{race.Name.ToString()} Adında Bir Yarış Oluşturuldu.");
+                }
             }
-            _races.Add(race);
         }
     }
 }
