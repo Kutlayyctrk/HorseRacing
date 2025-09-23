@@ -113,7 +113,7 @@
             // 
             this.BtnCreateRaceCard.Location = new System.Drawing.Point(155, 258);
             this.BtnCreateRaceCard.Name = "BtnCreateRaceCard";
-            this.BtnCreateRaceCard.Size = new System.Drawing.Size(100, 23);
+            this.BtnCreateRaceCard.Size = new System.Drawing.Size(112, 41);
             this.BtnCreateRaceCard.TabIndex = 3;
             this.BtnCreateRaceCard.Text = "Bülten Oluştur";
             this.BtnCreateRaceCard.UseVisualStyleBackColor = true;

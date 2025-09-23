@@ -54,7 +54,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(39, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 20);
+            this.label1.Size = new System.Drawing.Size(70, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Jokey Adı:";
             // 
@@ -63,7 +63,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(39, 177);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 20);
+            this.label2.Size = new System.Drawing.Size(77, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Jokey Yaşı:";
             // 
@@ -71,7 +71,7 @@
             // 
             this.BtnCreateJockey.Location = new System.Drawing.Point(150, 235);
             this.BtnCreateJockey.Name = "BtnCreateJockey";
-            this.BtnCreateJockey.Size = new System.Drawing.Size(100, 23);
+            this.BtnCreateJockey.Size = new System.Drawing.Size(114, 35);
             this.BtnCreateJockey.TabIndex = 2;
             this.BtnCreateJockey.Text = "Jokey Oluştur";
             this.BtnCreateJockey.UseVisualStyleBackColor = true;

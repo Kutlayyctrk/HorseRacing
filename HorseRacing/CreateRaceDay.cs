@@ -17,6 +17,7 @@ namespace HorseRacing
         public CreateRaceDay(List<RaceCard> raceCards, List<RaceDay> raceDays)
         {
             InitializeComponent();
+            CmbRaceCards.DisplayMember = "Name";
             foreach (RaceCard raceCard in raceCards)
             {
                 CmbRaceCards.Items.Add(raceCard);
@@ -26,6 +27,7 @@ namespace HorseRacing
 
         private void BtnAddRaceCard_Click(object sender, EventArgs e)
         {
+            LstRaceCards.DisplayMember = "Name";
             if (CmbRaceCards.SelectedItem != null)
             {
                 LstRaceCards.Items.Add(CmbRaceCards.SelectedItem);

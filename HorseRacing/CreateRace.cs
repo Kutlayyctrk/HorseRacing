@@ -18,10 +18,12 @@ namespace HorseRacing
         {
 
             InitializeComponent();
+            CmbHorse.DisplayMember = "Name";
             foreach (Horse horse in horses)
             {
                 CmbHorse.Items.Add(horse);
             }
+            CmbRaceCard.DisplayMember = "Name";
             foreach (RaceCard raceCard in raceCards)
             {
                 CmbRaceCard.Items.Add(raceCard);
@@ -31,6 +33,7 @@ namespace HorseRacing
 
         private void BtnAddHorse_Click(object sender, EventArgs e)
         {
+            LstSelectedHorse.DisplayMember = "Name";
             if (CmbHorse.SelectedItem != null)
             {
                 LstSelectedHorse.Items.Add(CmbHorse.SelectedItem);

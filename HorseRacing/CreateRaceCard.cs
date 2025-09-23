@@ -17,10 +17,12 @@ namespace HorseRacing
         public CreateRaceCard(List<Race> races, List<RaceDay> raceDays, List<RaceCard> raceCards)
         {
             InitializeComponent();
+            CmbRaces.DisplayMember = "Name";
             foreach (Race race in races)
             {
                 CmbRaces.Items.Add(race);
             }
+            CmbRaceDays.DisplayMember = "Name";
             foreach (RaceDay raceDay in raceDays)
             {
                 CmbRaceDays.Items.Add(raceDay);

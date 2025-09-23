@@ -17,6 +17,7 @@ namespace HorseRacing
         public CreateHorse(List<Horse> horses,List<Jockey> jockeys)
         {
             InitializeComponent();
+            CmbJockey.DisplayMember = "Name";
             foreach (Jockey jockey in jockeys)
             {
                 CmbJockey.Items.Add(jockey);    
