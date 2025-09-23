@@ -20,6 +20,7 @@ namespace HorseRacing.Entities
         public string Name { get; set; }
         public string Place { get; set; }
         public List<Race> Races { get; set; } //bülten içindeki yarışlar. 1 bültende birden fazla yarış olabilir.
+        public RaceDay raceDay { get; set; }
 
 
 
