@@ -39,10 +39,14 @@ namespace HorseRacing
                     return; 
                 }
 
+                if (CmbJockey.SelectedItem == null)
+                {
+                    MessageBox.Show("Required fields must be filled out!");
+                    return ;
+                }
                 
                 if (int.TryParse(TxtHorsaAge.Text, out int age))
                 {
-                   
                     Horse horse = new Horse(TxtHorseName.Text, age, TxtHorseRegion.Text, CmbJockey.SelectedItem as Jockey);
                     _horses.Add(horse);
                     DgvHorses.DataSource = null;
@@ -62,6 +66,10 @@ namespace HorseRacing
                     MessageBox.Show("Please enter a valid age.");
                     return; 
                 }
+
+               
+                
+
             }
             catch (Exception ex)
             {
