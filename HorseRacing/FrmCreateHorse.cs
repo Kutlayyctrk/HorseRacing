@@ -23,27 +23,50 @@ namespace HorseRacing
                 CmbJockey.Items.Add(jockey);
             }
             _horses = horses;
+            DgvHorses.DataSource = _horses;
 
 
         }
 
         private void BtnCreateHorse_Click(object sender, EventArgs e)
         {
-            if (CmbJockey.SelectedItem == null)
+            try
             {
-                MessageBox.Show("Jokey Kısmı Boş Bırakılamaz.");
-                return;
-            }
+                
+                if (string.IsNullOrWhiteSpace(TxtHorseName.Text) || string.IsNullOrWhiteSpace(TxtHorseRegion.Text))
+                {
+                    MessageBox.Show("Required fields must be filled out!");
+                    return; 
+                }
 
-            else
+                
+                if (int.TryParse(TxtHorsaAge.Text, out int age))
+                {
+                   
+                    Horse horse = new Horse(TxtHorseName.Text, age, TxtHorseRegion.Text, CmbJockey.SelectedItem as Jockey);
+                    _horses.Add(horse);
+                    DgvHorses.DataSource = null;
+                    DgvHorses.DataSource = _horses;
+
+                   
+                    TxtHorsaAge.Text = "";
+                    TxtHorseName.Text = "";
+                    TxtHorseRegion.Text = "";
+                    CmbJockey.Text = "";
+
+                    MessageBox.Show($"Horse has been created named by: {horse.Name}");
+                }
+                else
+                {
+                   
+                    MessageBox.Show("Please enter a valid age.");
+                    return; 
+                }
+            }
+            catch (Exception ex)
             {
-                Horse horse = new Horse(TxtHorseName.Text, Convert.ToInt32(TxtHorsaAge.Text), TxtHorseRegion.Text, CmbJockey.SelectedItem as Jockey);
-                _horses.Add(horse);
-                TxtHorsaAge.Text = "";
-                TxtHorseName.Text = "";
-                TxtHorseRegion.Text = "";
-                CmbJockey.Text = "";
-                MessageBox.Show($"{horse.Name.ToString()} Adında Bir  At Oluşturuldu");
+               
+                MessageBox.Show(ex.Message);
             }
         }
 

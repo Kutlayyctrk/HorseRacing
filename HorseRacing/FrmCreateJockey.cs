@@ -19,6 +19,8 @@ namespace HorseRacing
         {
             InitializeComponent();
             _jockeys = jockeys;
+
+            dgvJockeys.DataSource = jockeys;
         }
         private void BtnCreateJockey_Click(object sender, EventArgs e)
         {
@@ -26,13 +28,15 @@ namespace HorseRacing
             {
                 if (string.IsNullOrWhiteSpace(TxtJockeyName.Text))
                 {
-                    MessageBox.Show("Jokey ismi boş olamaz.");
+                    MessageBox.Show("Jockey name cannot be empty.");
                     return;
                 }
                 if (int.TryParse(TxtJockeyAge.Text, out int age))
                 {
                     Jockey jockey = new Jockey(TxtJockeyName.Text, age);
                     _jockeys.Add(jockey);
+                    dgvJockeys.DataSource = null;
+                    dgvJockeys.DataSource= _jockeys;
                     MessageBox.Show($"Jockey has been created named by : "+Environment.NewLine +jockey.Name);
                     TxtJockeyAge.Text = "";
                     TxtJockeyName.Text = "";

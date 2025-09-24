@@ -39,75 +39,72 @@
             // 
             // TxtRaceCardName
             // 
-            this.TxtRaceCardName.Location = new System.Drawing.Point(116, 63);
-            this.TxtRaceCardName.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtRaceCardName.Location = new System.Drawing.Point(155, 78);
+            this.TxtRaceCardName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRaceCardName.Name = "TxtRaceCardName";
-            this.TxtRaceCardName.Size = new System.Drawing.Size(76, 20);
+            this.TxtRaceCardName.Size = new System.Drawing.Size(100, 22);
             this.TxtRaceCardName.TabIndex = 0;
             // 
             // TxtRaceCardPlace
             // 
-            this.TxtRaceCardPlace.Location = new System.Drawing.Point(116, 96);
-            this.TxtRaceCardPlace.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtRaceCardPlace.Location = new System.Drawing.Point(155, 118);
+            this.TxtRaceCardPlace.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRaceCardPlace.Name = "TxtRaceCardPlace";
-            this.TxtRaceCardPlace.Size = new System.Drawing.Size(76, 20);
+            this.TxtRaceCardPlace.Size = new System.Drawing.Size(100, 22);
             this.TxtRaceCardPlace.TabIndex = 0;
             // 
             // CmbRaceDays
             // 
             this.CmbRaceDays.FormattingEnabled = true;
-            this.CmbRaceDays.Location = new System.Drawing.Point(116, 129);
-            this.CmbRaceDays.Margin = new System.Windows.Forms.Padding(2);
+            this.CmbRaceDays.Location = new System.Drawing.Point(155, 159);
+            this.CmbRaceDays.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CmbRaceDays.Name = "CmbRaceDays";
-            this.CmbRaceDays.Size = new System.Drawing.Size(76, 21);
+            this.CmbRaceDays.Size = new System.Drawing.Size(100, 24);
             this.CmbRaceDays.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 133);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(49, 164);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Yarış Günü:";
+            this.label2.Text = "Race Day";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 66);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(49, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Bülten Adı:";
+            this.label3.Text = "Name";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 100);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(49, 123);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.Size = new System.Drawing.Size(29, 16);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Bülten Şehri:";
+            this.label4.Text = "City";
             // 
             // BtnCreateRaceCard
             // 
-            this.BtnCreateRaceCard.Location = new System.Drawing.Point(116, 164);
-            this.BtnCreateRaceCard.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnCreateRaceCard.Location = new System.Drawing.Point(155, 202);
+            this.BtnCreateRaceCard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCreateRaceCard.Name = "BtnCreateRaceCard";
-            this.BtnCreateRaceCard.Size = new System.Drawing.Size(84, 33);
+            this.BtnCreateRaceCard.Size = new System.Drawing.Size(112, 41);
             this.BtnCreateRaceCard.TabIndex = 3;
-            this.BtnCreateRaceCard.Text = "Bülten Oluştur";
+            this.BtnCreateRaceCard.Text = "Add Bulletin";
             this.BtnCreateRaceCard.UseVisualStyleBackColor = true;
             this.BtnCreateRaceCard.Click += new System.EventHandler(this.BtnCreateRaceCard_Click);
             // 
             // FrmCreateRaceCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnCreateRaceCard);
             this.Controls.Add(this.CmbRaceDays);
             this.Controls.Add(this.label4);
@@ -115,9 +112,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TxtRaceCardPlace);
             this.Controls.Add(this.TxtRaceCardName);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmCreateRaceCard";
-            this.Text = "CreateRaceCard";
+            this.Text = "RaceCards";
             this.ResumeLayout(false);
             this.PerformLayout();
 

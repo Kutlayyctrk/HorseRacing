@@ -9,6 +9,10 @@ namespace HorseRacing.Entities
 {
     public class Jockey : IBaseEntites
     {
+        public override string ToString()
+        {
+            return Name;
+        }
         public Jockey(string name,int age)
         {
             Name = name;

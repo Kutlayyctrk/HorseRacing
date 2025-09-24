@@ -14,11 +14,16 @@ namespace HorseRacing
     public partial class FrmCreateRaceDay : FrmBase
     {
         private List<RaceDay> _raceDays;
+        private List<RaceCard> _raceCards;
         public FrmCreateRaceDay(List<RaceCard> raceCards, List<RaceDay> raceDays)
         {
             InitializeComponent();
 
             _raceDays = raceDays;
+            _raceCards = raceCards;
+            dgvRaceDays.DataSource = _raceDays;
+            
+            
         }
 
 
@@ -27,20 +32,32 @@ namespace HorseRacing
 
         private void BtnCreateRaceDay_Click(object sender, EventArgs e)
         {
-            if(TxtRaceDayName.Text==null)
+            try
             {
-                MessageBox.Show("Yarış İsmi Kısmı Boş Bırakılamaz.");
+
+                if (string.IsNullOrWhiteSpace(TxtRaceDayName.Text))
+                {
+                    MessageBox.Show("RaceDay name cannot be Empty!");
+                    return;
+                }
+                RaceDay raceDay = new RaceDay();
+                {
+                    raceDay.Name = TxtRaceDayName.Text;
+                    raceDay.Date = DTPRaceDay.Value;
+
+
+                }
+                _raceDays.Add(raceDay);
+                dgvRaceDays.DataSource = null;
+                dgvRaceDays.DataSource=_raceDays;
+                MessageBox.Show($"Race Day has been created named by:"+Environment.NewLine+raceDay.Name);
+            }
+            catch (Exception ex)
+            {
+
+                 MessageBox.Show(ex.Message);
                 return;
             }
-            RaceDay raceDay = new RaceDay();
-            {
-                raceDay.Name = TxtRaceDayName.Text;
-                raceDay.Date = DTPRaceDay.Value;
-
-
-            }
-            _raceDays.Add(raceDay);
-            MessageBox.Show($"{raceDay.Name.ToString()} Adında Bir Yarış Günü Oluşturuldu.");
         }
     }
 }
