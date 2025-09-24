@@ -1,6 +1,6 @@
 ﻿namespace HorseRacing
 {
-    partial class Information
+    partial class FrmInformation
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace HorseRacing
 {
-    partial class MainForm
+    partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -39,9 +39,10 @@
             // 
             // BtnCreateJockey
             // 
-            this.BtnCreateJockey.Location = new System.Drawing.Point(45, 74);
+            this.BtnCreateJockey.Location = new System.Drawing.Point(34, 60);
+            this.BtnCreateJockey.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCreateJockey.Name = "BtnCreateJockey";
-            this.BtnCreateJockey.Size = new System.Drawing.Size(137, 65);
+            this.BtnCreateJockey.Size = new System.Drawing.Size(103, 53);
             this.BtnCreateJockey.TabIndex = 0;
             this.BtnCreateJockey.Text = "Jokey Oluştur";
             this.BtnCreateJockey.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // 
             // BtnCreateRaceCard
             // 
-            this.BtnCreateRaceCard.Location = new System.Drawing.Point(523, 74);
+            this.BtnCreateRaceCard.Location = new System.Drawing.Point(392, 60);
+            this.BtnCreateRaceCard.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCreateRaceCard.Name = "BtnCreateRaceCard";
-            this.BtnCreateRaceCard.Size = new System.Drawing.Size(137, 65);
+            this.BtnCreateRaceCard.Size = new System.Drawing.Size(103, 53);
             this.BtnCreateRaceCard.TabIndex = 0;
             this.BtnCreateRaceCard.Text = "Bülten Oluştur";
             this.BtnCreateRaceCard.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // 
             // BtnCreateHorse
             // 
-            this.BtnCreateHorse.Location = new System.Drawing.Point(198, 74);
+            this.BtnCreateHorse.Location = new System.Drawing.Point(148, 60);
+            this.BtnCreateHorse.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCreateHorse.Name = "BtnCreateHorse";
-            this.BtnCreateHorse.Size = new System.Drawing.Size(137, 65);
+            this.BtnCreateHorse.Size = new System.Drawing.Size(103, 53);
             this.BtnCreateHorse.TabIndex = 0;
             this.BtnCreateHorse.Text = "At Oluştur";
             this.BtnCreateHorse.UseVisualStyleBackColor = true;
@@ -69,9 +72,10 @@
             // 
             // BtnCreateRace
             // 
-            this.BtnCreateRace.Location = new System.Drawing.Point(694, 74);
+            this.BtnCreateRace.Location = new System.Drawing.Point(520, 60);
+            this.BtnCreateRace.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCreateRace.Name = "BtnCreateRace";
-            this.BtnCreateRace.Size = new System.Drawing.Size(137, 65);
+            this.BtnCreateRace.Size = new System.Drawing.Size(103, 53);
             this.BtnCreateRace.TabIndex = 0;
             this.BtnCreateRace.Text = "Koşu Oluştur";
             this.BtnCreateRace.UseVisualStyleBackColor = true;
@@ -79,9 +83,10 @@
             // 
             // BtnCreateRaceDay
             // 
-            this.BtnCreateRaceDay.Location = new System.Drawing.Point(359, 74);
+            this.BtnCreateRaceDay.Location = new System.Drawing.Point(269, 60);
+            this.BtnCreateRaceDay.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCreateRaceDay.Name = "BtnCreateRaceDay";
-            this.BtnCreateRaceDay.Size = new System.Drawing.Size(137, 65);
+            this.BtnCreateRaceDay.Size = new System.Drawing.Size(103, 53);
             this.BtnCreateRaceDay.TabIndex = 0;
             this.BtnCreateRaceDay.Text = "Yarış Günü Oluştur";
             this.BtnCreateRaceDay.UseVisualStyleBackColor = true;
@@ -89,9 +94,10 @@
             // 
             // BtnInformation
             // 
-            this.BtnInformation.Location = new System.Drawing.Point(359, 159);
+            this.BtnInformation.Location = new System.Drawing.Point(269, 129);
+            this.BtnInformation.Margin = new System.Windows.Forms.Padding(2);
             this.BtnInformation.Name = "BtnInformation";
-            this.BtnInformation.Size = new System.Drawing.Size(137, 65);
+            this.BtnInformation.Size = new System.Drawing.Size(103, 53);
             this.BtnInformation.TabIndex = 1;
             this.BtnInformation.Text = "Bilgi Görüntüle";
             this.BtnInformation.UseVisualStyleBackColor = true;
@@ -100,16 +106,17 @@
             // LblInfo
             // 
             this.LblInfo.BackColor = System.Drawing.SystemColors.Info;
-            this.LblInfo.Location = new System.Drawing.Point(61, 235);
+            this.LblInfo.Location = new System.Drawing.Point(46, 191);
+            this.LblInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblInfo.Name = "LblInfo";
-            this.LblInfo.Size = new System.Drawing.Size(534, 84);
+            this.LblInfo.Size = new System.Drawing.Size(400, 68);
             this.LblInfo.TabIndex = 2;
             // 
-            // MainForm
+            // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 353);
+            this.ClientSize = new System.Drawing.Size(655, 287);
             this.Controls.Add(this.LblInfo);
             this.Controls.Add(this.BtnInformation);
             this.Controls.Add(this.BtnCreateRace);
@@ -117,7 +124,8 @@
             this.Controls.Add(this.BtnCreateRaceCard);
             this.Controls.Add(this.BtnCreateHorse);
             this.Controls.Add(this.BtnCreateJockey);
-            this.Name = "MainForm";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "FrmMain";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);

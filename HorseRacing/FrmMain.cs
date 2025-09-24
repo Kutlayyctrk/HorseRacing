@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace HorseRacing
 {
-    public partial class MainForm : Form
+    public partial class FrmMain : FrmBase
     {
         
         List<RaceCard> raceCards = new List<RaceCard>();
@@ -20,14 +20,14 @@ namespace HorseRacing
         List<Jockey> jockeys = new List<Jockey>();
         List<RaceDay> raceDays = new List<RaceDay>();
         List<AllData> allData = new List<AllData>();
-        public MainForm()
+        public FrmMain()
         {
             InitializeComponent();
         }
 
         private void BtnCreateJockey_Click(object sender, EventArgs e)
         {
-            CreateJockey c1 = new CreateJockey(jockeys);
+            FrmCreateJockey c1 = new FrmCreateJockey(jockeys);
             c1.Show();
         }
 
@@ -40,7 +40,7 @@ namespace HorseRacing
             }
             else
             {
-                CreateHorse c1 = new CreateHorse(horses, jockeys);
+                FrmCreateHorse c1 = new FrmCreateHorse(horses, jockeys);
                 c1.Show();
             }
         }
@@ -60,7 +60,7 @@ namespace HorseRacing
             }
             else
             {
-                CreateRace c1 = new CreateRace(horses, raceCards, races);
+                FrmCreateRace c1 = new FrmCreateRace(horses, raceCards, races);
                 c1.Show();
             }
         }
@@ -72,13 +72,13 @@ namespace HorseRacing
                 MessageBox.Show("Önce Bir Yarış Günü yaratmalsınız");
                 return;
             }
-            CreateRaceCard c1 = new CreateRaceCard(races, raceDays, raceCards);
+            FrmCreateRaceCard c1 = new FrmCreateRaceCard(races, raceDays, raceCards);
             c1.Show();
         }
 
         private void BtnCreateRaceDay_Click(object sender, EventArgs e)
         {
-            CreateRaceDay c1 = new CreateRaceDay(raceCards, raceDays);
+            FrmCreateRaceDay c1 = new FrmCreateRaceDay(raceCards, raceDays);
             c1.Show();
 
         }
@@ -90,7 +90,7 @@ namespace HorseRacing
 
         private void BtnInformation_Click(object sender, EventArgs e)
         {
-            Information i1 = new Information(jockeys,horses,races,raceCards,raceDays,allData);
+            FrmInformation i1 = new FrmInformation(jockeys,horses,races,raceCards,raceDays,allData);
             i1.Show();
         }
     }

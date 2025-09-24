@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace HorseRacing
 {
-    public partial class Information : Form
+    public partial class FrmInformation : FrmBase
     {
         private List<Horse> _horses;
         private List<Race> _races;
         private List<RaceCard> _raceCards;
         private List<RaceDay> _raceDays;
         private List<Jockey> _jockeys;
-        private List<AllData> _allData
-        public Information(List<Jockey> jokeys, List<Horse> horses, List<Race> races, List<RaceCard> raceCards, List<RaceDay> raceDays,List<AllData>allDatas)
+        private List<AllData> _allData;
+        public FrmInformation(List<Jockey> jokeys, List<Horse> horses, List<Race> races, List<RaceCard> raceCards, List<RaceDay> raceDays,List<AllData>allDatas)
         {
             InitializeComponent();
             _jockeys = jokeys;

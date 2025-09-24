@@ -1,6 +1,6 @@
 ﻿namespace HorseRacing
 {
-    partial class CreateRace
+    partial class FrmCreateRace
     {
         /// <summary>
         /// Required designer variable.
@@ -42,59 +42,66 @@
             // 
             // TxtRaceName
             // 
-            this.TxtRaceName.Location = new System.Drawing.Point(139, 44);
+            this.TxtRaceName.Location = new System.Drawing.Point(104, 36);
+            this.TxtRaceName.Margin = new System.Windows.Forms.Padding(2);
             this.TxtRaceName.Name = "TxtRaceName";
-            this.TxtRaceName.Size = new System.Drawing.Size(100, 22);
+            this.TxtRaceName.Size = new System.Drawing.Size(76, 20);
             this.TxtRaceName.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 50);
+            this.label1.Location = new System.Drawing.Point(25, 41);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 16);
+            this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Yarış Adı:";
             // 
             // CmbHorse
             // 
             this.CmbHorse.FormattingEnabled = true;
-            this.CmbHorse.Location = new System.Drawing.Point(139, 112);
+            this.CmbHorse.Location = new System.Drawing.Point(104, 91);
+            this.CmbHorse.Margin = new System.Windows.Forms.Padding(2);
             this.CmbHorse.Name = "CmbHorse";
-            this.CmbHorse.Size = new System.Drawing.Size(100, 24);
+            this.CmbHorse.Size = new System.Drawing.Size(76, 21);
             this.CmbHorse.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 115);
+            this.label2.Location = new System.Drawing.Point(25, 93);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "At Seçin:";
             // 
             // CmbRaceCard
             // 
             this.CmbRaceCard.FormattingEnabled = true;
-            this.CmbRaceCard.Location = new System.Drawing.Point(139, 175);
+            this.CmbRaceCard.Location = new System.Drawing.Point(104, 142);
+            this.CmbRaceCard.Margin = new System.Windows.Forms.Padding(2);
             this.CmbRaceCard.Name = "CmbRaceCard";
-            this.CmbRaceCard.Size = new System.Drawing.Size(100, 24);
+            this.CmbRaceCard.Size = new System.Drawing.Size(76, 21);
             this.CmbRaceCard.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 183);
+            this.label3.Location = new System.Drawing.Point(25, 149);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 16);
+            this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Bülten Seçin:";
             // 
             // BtnCreateRace
             // 
-            this.BtnCreateRace.Location = new System.Drawing.Point(148, 263);
+            this.BtnCreateRace.Location = new System.Drawing.Point(111, 214);
+            this.BtnCreateRace.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCreateRace.Name = "BtnCreateRace";
-            this.BtnCreateRace.Size = new System.Drawing.Size(100, 37);
+            this.BtnCreateRace.Size = new System.Drawing.Size(75, 30);
             this.BtnCreateRace.TabIndex = 3;
             this.BtnCreateRace.Text = "Yarış Oluştur";
             this.BtnCreateRace.UseVisualStyleBackColor = true;
@@ -102,9 +109,10 @@
             // 
             // BtnAddHorse
             // 
-            this.BtnAddHorse.Location = new System.Drawing.Point(269, 107);
+            this.BtnAddHorse.Location = new System.Drawing.Point(202, 87);
+            this.BtnAddHorse.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAddHorse.Name = "BtnAddHorse";
-            this.BtnAddHorse.Size = new System.Drawing.Size(129, 29);
+            this.BtnAddHorse.Size = new System.Drawing.Size(97, 24);
             this.BtnAddHorse.TabIndex = 4;
             this.BtnAddHorse.Text = "Atı Gruba Ekle";
             this.BtnAddHorse.UseVisualStyleBackColor = true;
@@ -113,27 +121,28 @@
             // LstSelectedHorse
             // 
             this.LstSelectedHorse.FormattingEnabled = true;
-            this.LstSelectedHorse.ItemHeight = 16;
-            this.LstSelectedHorse.Location = new System.Drawing.Point(429, 67);
+            this.LstSelectedHorse.Location = new System.Drawing.Point(322, 54);
+            this.LstSelectedHorse.Margin = new System.Windows.Forms.Padding(2);
             this.LstSelectedHorse.Name = "LstSelectedHorse";
-            this.LstSelectedHorse.Size = new System.Drawing.Size(348, 132);
+            this.LstSelectedHorse.Size = new System.Drawing.Size(262, 108);
             this.LstSelectedHorse.TabIndex = 5;
             // 
             // BtnDeleteHorse
             // 
-            this.BtnDeleteHorse.Location = new System.Drawing.Point(648, 215);
+            this.BtnDeleteHorse.Location = new System.Drawing.Point(486, 175);
+            this.BtnDeleteHorse.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDeleteHorse.Name = "BtnDeleteHorse";
-            this.BtnDeleteHorse.Size = new System.Drawing.Size(129, 29);
+            this.BtnDeleteHorse.Size = new System.Drawing.Size(97, 24);
             this.BtnDeleteHorse.TabIndex = 4;
             this.BtnDeleteHorse.Text = "Atı Gruptan Çıkar";
             this.BtnDeleteHorse.UseVisualStyleBackColor = true;
             this.BtnDeleteHorse.Click += new System.EventHandler(this.BtnDeleteHorse_Click);
             // 
-            // CreateRace
+            // FrmCreateRace
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.LstSelectedHorse);
             this.Controls.Add(this.BtnDeleteHorse);
             this.Controls.Add(this.BtnAddHorse);
@@ -144,7 +153,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtRaceName);
-            this.Name = "CreateRace";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "FrmCreateRace";
             this.Text = "CreateRace";
             this.ResumeLayout(false);
             this.PerformLayout();

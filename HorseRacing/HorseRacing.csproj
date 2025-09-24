@@ -46,35 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateHorse.cs">
+    <Compile Include="FrmBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateHorse.Designer.cs">
-      <DependentUpon>CreateHorse.cs</DependentUpon>
+    <Compile Include="FrmBase.Designer.cs">
+      <DependentUpon>FrmBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateJockey.cs">
+    <Compile Include="FrmCreateHorse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateJockey.Designer.cs">
-      <DependentUpon>CreateJockey.cs</DependentUpon>
+    <Compile Include="FrmCreateHorse.Designer.cs">
+      <DependentUpon>FrmCreateHorse.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateRace.cs">
+    <Compile Include="FrmCreateJockey.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateRace.Designer.cs">
-      <DependentUpon>CreateRace.cs</DependentUpon>
+    <Compile Include="FrmCreateJockey.Designer.cs">
+      <DependentUpon>FrmCreateJockey.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateRaceCard.cs">
+    <Compile Include="FrmCreateRace.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateRaceCard.Designer.cs">
-      <DependentUpon>CreateRaceCard.cs</DependentUpon>
+    <Compile Include="FrmCreateRace.Designer.cs">
+      <DependentUpon>FrmCreateRace.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateRaceDay.cs">
+    <Compile Include="FrmCreateRaceCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateRaceDay.Designer.cs">
-      <DependentUpon>CreateRaceDay.cs</DependentUpon>
+    <Compile Include="FrmCreateRaceCard.Designer.cs">
+      <DependentUpon>FrmCreateRaceCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreateRaceDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateRaceDay.Designer.cs">
+      <DependentUpon>FrmCreateRaceDay.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\AllData.cs" />
     <Compile Include="Entities\RaceDay.cs" />
@@ -82,41 +88,44 @@
     <Compile Include="Entities\Jockey.cs" />
     <Compile Include="Entities\Race.cs" />
     <Compile Include="Entities\RaceCard.cs" />
-    <Compile Include="Information.cs">
+    <Compile Include="FrmInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Information.Designer.cs">
-      <DependentUpon>Information.cs</DependentUpon>
+    <Compile Include="FrmInformation.Designer.cs">
+      <DependentUpon>FrmInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IBaseEntites.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CreateHorse.resx">
-      <DependentUpon>CreateHorse.cs</DependentUpon>
+    <EmbeddedResource Include="FrmBase.resx">
+      <DependentUpon>FrmBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateJockey.resx">
-      <DependentUpon>CreateJockey.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCreateHorse.resx">
+      <DependentUpon>FrmCreateHorse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateRace.resx">
-      <DependentUpon>CreateRace.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCreateJockey.resx">
+      <DependentUpon>FrmCreateJockey.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateRaceCard.resx">
-      <DependentUpon>CreateRaceCard.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCreateRace.resx">
+      <DependentUpon>FrmCreateRace.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateRaceDay.resx">
-      <DependentUpon>CreateRaceDay.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCreateRaceCard.resx">
+      <DependentUpon>FrmCreateRaceCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Information.resx">
-      <DependentUpon>Information.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCreateRaceDay.resx">
+      <DependentUpon>FrmCreateRaceDay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="FrmInformation.resx">
+      <DependentUpon>FrmInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

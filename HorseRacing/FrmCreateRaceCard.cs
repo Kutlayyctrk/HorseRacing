@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace HorseRacing
 {
-    public partial class CreateRaceCard : Form
+    public partial class FrmCreateRaceCard : FrmBase
     {
         private List<RaceCard> _raceCards;
 
-        public CreateRaceCard(List<Race> races, List<RaceDay> raceDays, List<RaceCard> raceCards)
+        public FrmCreateRaceCard(List<Race> races, List<RaceDay> raceDays, List<RaceCard> raceCards)
         {
             InitializeComponent();
 

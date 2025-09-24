@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace HorseRacing
 {
-    public partial class CreateHorse : Form
+    public partial class FrmCreateHorse : FrmBase
     {
         private List<Horse> _horses;
-        public CreateHorse(List<Horse> horses, List<Jockey> jockeys)
+        public FrmCreateHorse(List<Horse> horses, List<Jockey> jockeys)
         {
             InitializeComponent();
             CmbJockey.DisplayMember = "Name";

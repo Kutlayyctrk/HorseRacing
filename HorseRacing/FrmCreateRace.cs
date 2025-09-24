@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace HorseRacing
 {
-    public partial class CreateRace : Form
+    public partial class FrmCreateRace : FrmBase
     {
         private List<Race> _races = new List<Race>();
-        public CreateRace(List<Horse> horses, List<RaceCard> raceCards, List<Race> races)
+        public FrmCreateRace(List<Horse> horses, List<RaceCard> raceCards, List<Race> races)
         {
             InitializeComponent();
             CmbHorse.DisplayMember = "Name";
