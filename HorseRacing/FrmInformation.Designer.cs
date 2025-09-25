@@ -28,101 +28,132 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.DgvRaceDay = new System.Windows.Forms.DataGridView();
+            this.dgvRaceCard = new System.Windows.Forms.DataGridView();
+            this.dgvHorse = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.dgvRace = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvRaceDay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRaceCard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRace)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DgvRaceDay
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 34);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(481, 587);
-            this.dataGridView1.TabIndex = 0;
+            this.DgvRaceDay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvRaceDay.Location = new System.Drawing.Point(12, 34);
+            this.DgvRaceDay.Name = "DgvRaceDay";
+            this.DgvRaceDay.RowHeadersWidth = 51;
+            this.DgvRaceDay.RowTemplate.Height = 24;
+            this.DgvRaceDay.Size = new System.Drawing.Size(441, 857);
+            this.DgvRaceDay.TabIndex = 0;
+            this.DgvRaceDay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvRaceDay_CellClick);
             // 
-            // dataGridView2
+            // dgvRaceCard
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(516, 34);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(481, 587);
-            this.dataGridView2.TabIndex = 0;
+            this.dgvRaceCard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRaceCard.Location = new System.Drawing.Point(534, 34);
+            this.dgvRaceCard.Name = "dgvRaceCard";
+            this.dgvRaceCard.RowHeadersWidth = 51;
+            this.dgvRaceCard.RowTemplate.Height = 24;
+            this.dgvRaceCard.Size = new System.Drawing.Size(439, 857);
+            this.dgvRaceCard.TabIndex = 0;
+            this.dgvRaceCard.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRaceCard_CellClick);
             // 
-            // dataGridView3
+            // dgvHorse
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(1003, 34);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(481, 587);
-            this.dataGridView3.TabIndex = 0;
+            this.dgvHorse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHorse.Location = new System.Drawing.Point(1582, 34);
+            this.dgvHorse.Name = "dgvHorse";
+            this.dgvHorse.RowHeadersWidth = 51;
+            this.dgvHorse.RowTemplate.Height = 24;
+            this.dgvHorse.Size = new System.Drawing.Size(432, 857);
+            this.dgvHorse.TabIndex = 0;
+           
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(105, 7);
+            this.label1.Location = new System.Drawing.Point(12, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(326, 23);
+            this.label1.Size = new System.Drawing.Size(441, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.label1.Text = "Race Day";
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(592, 8);
+            this.label2.Location = new System.Drawing.Point(531, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(326, 23);
+            this.label2.Size = new System.Drawing.Size(442, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "label1";
+            this.label2.Text = "Race Card";
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Location = new System.Drawing.Point(1082, 8);
+            this.label3.Location = new System.Drawing.Point(1579, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(326, 23);
+            this.label3.Size = new System.Drawing.Size(435, 17);
             this.label3.TabIndex = 1;
-            this.label3.Text = "label1";
+            this.label3.Text = "Horse";
+            // 
+            // dgvRace
+            // 
+            this.dgvRace.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRace.Location = new System.Drawing.Point(1058, 34);
+            this.dgvRace.Name = "dgvRace";
+            this.dgvRace.RowHeadersWidth = 51;
+            this.dgvRace.RowTemplate.Height = 24;
+            this.dgvRace.Size = new System.Drawing.Size(438, 857);
+            this.dgvRace.TabIndex = 0;
+            this.dgvRace.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRace_CellClick);
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Location = new System.Drawing.Point(1055, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(441, 17);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Race";
             // 
             // FrmInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1528, 633);
+            this.ClientSize = new System.Drawing.Size(2024, 912);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvRace);
+            this.Controls.Add(this.dgvHorse);
+            this.Controls.Add(this.dgvRaceCard);
+            this.Controls.Add(this.DgvRaceDay);
             this.Name = "FrmInformation";
             this.Text = "Information";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvRaceDay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRaceCard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRace)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView DgvRaceDay;
+        private System.Windows.Forms.DataGridView dgvRaceCard;
+        private System.Windows.Forms.DataGridView dgvHorse;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dgvRace;
+        private System.Windows.Forms.Label label4;
     }
 }

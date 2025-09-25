@@ -51,6 +51,7 @@ namespace HorseRacing
                 dgvRaceDays.DataSource = null;
                 dgvRaceDays.DataSource=_raceDays;
                 MessageBox.Show($"Race Day has been created named by:"+Environment.NewLine+raceDay.Name);
+                TxtRaceDayName.Text = null;
             }
             catch (Exception ex)
             {
