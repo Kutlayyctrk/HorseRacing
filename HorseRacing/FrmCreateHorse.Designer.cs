@@ -105,6 +105,7 @@
             // 
             // CmbJockey
             // 
+            this.CmbJockey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbJockey.FormattingEnabled = true;
             this.CmbJockey.Location = new System.Drawing.Point(112, 175);
             this.CmbJockey.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

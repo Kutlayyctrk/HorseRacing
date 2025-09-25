@@ -38,6 +38,8 @@
             this.BtnAddHorse = new System.Windows.Forms.Button();
             this.LstSelectedHorse = new System.Windows.Forms.ListBox();
             this.BtnDeleteHorse = new System.Windows.Forms.Button();
+            this.dgvRaces = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRaces)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtRaceName
@@ -59,6 +61,7 @@
             // 
             // CmbHorse
             // 
+            this.CmbHorse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbHorse.FormattingEnabled = true;
             this.CmbHorse.Location = new System.Drawing.Point(139, 112);
             this.CmbHorse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -77,6 +80,7 @@
             // 
             // CmbRaceCard
             // 
+            this.CmbRaceCard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbRaceCard.FormattingEnabled = true;
             this.CmbRaceCard.Location = new System.Drawing.Point(139, 175);
             this.CmbRaceCard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -95,7 +99,7 @@
             // 
             // BtnCreateRace
             // 
-            this.BtnCreateRace.Location = new System.Drawing.Point(148, 263);
+            this.BtnCreateRace.Location = new System.Drawing.Point(139, 215);
             this.BtnCreateRace.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCreateRace.Name = "BtnCreateRace";
             this.BtnCreateRace.Size = new System.Drawing.Size(100, 37);
@@ -119,15 +123,15 @@
             // 
             this.LstSelectedHorse.FormattingEnabled = true;
             this.LstSelectedHorse.ItemHeight = 16;
-            this.LstSelectedHorse.Location = new System.Drawing.Point(429, 66);
+            this.LstSelectedHorse.Location = new System.Drawing.Point(429, 18);
             this.LstSelectedHorse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LstSelectedHorse.Name = "LstSelectedHorse";
-            this.LstSelectedHorse.Size = new System.Drawing.Size(348, 132);
+            this.LstSelectedHorse.Size = new System.Drawing.Size(133, 356);
             this.LstSelectedHorse.TabIndex = 5;
             // 
             // BtnDeleteHorse
             // 
-            this.BtnDeleteHorse.Location = new System.Drawing.Point(648, 215);
+            this.BtnDeleteHorse.Location = new System.Drawing.Point(429, 384);
             this.BtnDeleteHorse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnDeleteHorse.Name = "BtnDeleteHorse";
             this.BtnDeleteHorse.Size = new System.Drawing.Size(129, 55);
@@ -136,11 +140,22 @@
             this.BtnDeleteHorse.UseVisualStyleBackColor = true;
             this.BtnDeleteHorse.Click += new System.EventHandler(this.BtnDeleteHorse_Click);
             // 
+            // dgvRaces
+            // 
+            this.dgvRaces.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRaces.Location = new System.Drawing.Point(568, 18);
+            this.dgvRaces.Name = "dgvRaces";
+            this.dgvRaces.RowHeadersWidth = 51;
+            this.dgvRaces.RowTemplate.Height = 24;
+            this.dgvRaces.Size = new System.Drawing.Size(656, 420);
+            this.dgvRaces.TabIndex = 6;
+            // 
             // FrmCreateRace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1236, 450);
+            this.Controls.Add(this.dgvRaces);
             this.Controls.Add(this.LstSelectedHorse);
             this.Controls.Add(this.BtnDeleteHorse);
             this.Controls.Add(this.BtnAddHorse);
@@ -154,6 +169,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmCreateRace";
             this.Text = "Races";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRaces)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +187,6 @@
         private System.Windows.Forms.Button BtnAddHorse;
         private System.Windows.Forms.ListBox LstSelectedHorse;
         private System.Windows.Forms.Button BtnDeleteHorse;
+        private System.Windows.Forms.DataGridView dgvRaces;
     }
 }

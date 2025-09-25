@@ -35,6 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.BtnCreateRaceCard = new System.Windows.Forms.Button();
+            this.dgvRaceCards = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRaceCards)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtRaceCardName
@@ -55,6 +57,7 @@
             // 
             // CmbRaceDays
             // 
+            this.CmbRaceDays.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbRaceDays.FormattingEnabled = true;
             this.CmbRaceDays.Location = new System.Drawing.Point(155, 159);
             this.CmbRaceDays.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -100,11 +103,22 @@
             this.BtnCreateRaceCard.UseVisualStyleBackColor = true;
             this.BtnCreateRaceCard.Click += new System.EventHandler(this.BtnCreateRaceCard_Click);
             // 
+            // dgvRaceCards
+            // 
+            this.dgvRaceCards.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRaceCards.Location = new System.Drawing.Point(300, 12);
+            this.dgvRaceCards.Name = "dgvRaceCards";
+            this.dgvRaceCards.RowHeadersWidth = 51;
+            this.dgvRaceCards.RowTemplate.Height = 24;
+            this.dgvRaceCards.Size = new System.Drawing.Size(488, 426);
+            this.dgvRaceCards.TabIndex = 4;
+            // 
             // FrmCreateRaceCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvRaceCards);
             this.Controls.Add(this.BtnCreateRaceCard);
             this.Controls.Add(this.CmbRaceDays);
             this.Controls.Add(this.label4);
@@ -115,6 +129,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmCreateRaceCard";
             this.Text = "RaceCards";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRaceCards)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +144,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BtnCreateRaceCard;
+        private System.Windows.Forms.DataGridView dgvRaceCards;
     }
 }

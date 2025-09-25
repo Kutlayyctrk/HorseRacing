@@ -20,7 +20,7 @@ namespace HorseRacing
             InitializeComponent();
             _jockeys = jockeys;
 
-            dgvJockeys.DataSource = jockeys;
+            dgvJockeys.DataSource = _jockeys;
         }
         private void BtnCreateJockey_Click(object sender, EventArgs e)
         {

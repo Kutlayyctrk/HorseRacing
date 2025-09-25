@@ -17,7 +17,7 @@ namespace HorseRacing
         public FrmCreateHorse(List<Horse> horses, List<Jockey> jockeys)
         {
             InitializeComponent();
-            CmbJockey.DisplayMember = "Name";
+            
             foreach (Jockey jockey in jockeys)
             {
                 CmbJockey.Items.Add(jockey);
@@ -56,7 +56,8 @@ namespace HorseRacing
                     TxtHorsaAge.Text = "";
                     TxtHorseName.Text = "";
                     TxtHorseRegion.Text = "";
-                    CmbJockey.Text = "";
+                    CmbJockey.SelectedItem = null;
+                   
 
                     MessageBox.Show($"Horse has been created named by: {horse.Name}");
                 }

@@ -8,6 +8,7 @@ namespace HorseRacing.Interfaces
 {
     public interface IBaseEntites
     {
+        
         int Id { get; set; }
         string Name { get; set; }
     }

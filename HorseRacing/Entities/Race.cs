@@ -9,14 +9,20 @@ namespace HorseRacing.Entities
 {
     public class Race : IBaseEntites
     {
-        public Race(string name, List<Horse> horse)
+        public override string ToString()
         {
+            return Name;
+        }
+        public Race(string name, List<Horse> horses)
+        {
+            Name = name;
+            Horses = horses;
             Id = ++counter;
 
         }
         public Race()
         {
-
+            Id = ++counter;
         }
         
 

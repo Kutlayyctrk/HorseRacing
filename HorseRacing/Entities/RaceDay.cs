@@ -9,6 +9,10 @@ namespace HorseRacing.Entities
 {
     public class RaceDay :IBaseEntites
     {
+        public override string ToString()
+        {
+            return Name;
+        }
         public RaceDay()
         {
             Id = ++counter;

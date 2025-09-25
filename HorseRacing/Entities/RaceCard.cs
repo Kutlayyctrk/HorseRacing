@@ -10,6 +10,10 @@ namespace HorseRacing.Entities
 {
     public class RaceCard : IBaseEntites
     {
+        public override string ToString()
+        {
+            return Name;
+        }
         public RaceCard()
         {
             Id = ++counter;
