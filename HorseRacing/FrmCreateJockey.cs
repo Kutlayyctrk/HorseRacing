@@ -14,12 +14,11 @@ namespace HorseRacing
 
     public partial class FrmCreateJockey : FrmBase
     {
-        private List<Jockey> _jockeys;
+        private BindingList<Jockey> _jockeys;
         public FrmCreateJockey(List<Jockey> jockeys)
         {
             InitializeComponent();
-            _jockeys = jockeys;
-
+            _jockeys = new BindingList<Jockey>(jockeys);
             dgvJockeys.DataSource = _jockeys;
         }
         private void BtnCreateJockey_Click(object sender, EventArgs e)
@@ -35,11 +34,10 @@ namespace HorseRacing
                 {
                     Jockey jockey = new Jockey(TxtJockeyName.Text, age);
                     _jockeys.Add(jockey);
-                    dgvJockeys.DataSource = null;
-                    dgvJockeys.DataSource= _jockeys;
                     MessageBox.Show($"Jockey has been created named by : "+Environment.NewLine +jockey.Name);
-                    TxtJockeyAge.Text = "";
-                    TxtJockeyName.Text = "";
+                    TxtJockeyAge.Text = string.Empty;
+                    TxtJockeyName.Text = string.Empty;
+                    TxtJockeyName.Focus();
                 }
                 else
                 {
@@ -51,6 +49,6 @@ namespace HorseRacing
                 MessageBox.Show(ex.Message);
                 return;
             }
-        }
+        } 
     }
 }
