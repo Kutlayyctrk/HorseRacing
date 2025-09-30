@@ -13,14 +13,14 @@ namespace HorseRacing
 {
     public partial class FrmCreateRaceDay : FrmBase
     {
-        private List<RaceDay> _raceDays;
-        private List<RaceCard> _raceCards;
-        public FrmCreateRaceDay(List<RaceCard> raceCards, List<RaceDay> raceDays)
+        private BindingList<RaceDay> _raceDays;
+        private BindingList<RaceCard> _raceCards;
+        public FrmCreateRaceDay(BindingList<RaceCard> raceCards, BindingList<RaceDay> raceDays)
         {
             InitializeComponent();
 
-            _raceDays = raceDays;
-            _raceCards = raceCards;
+            _raceDays = new BindingList<RaceDay>(raceDays);
+            _raceCards = new BindingList<RaceCard>(raceCards);
             dgvRaceDays.DataSource = _raceDays;
             
             
@@ -48,10 +48,10 @@ namespace HorseRacing
 
                 }
                 _raceDays.Add(raceDay);
-                dgvRaceDays.DataSource = null;
+                
                 dgvRaceDays.DataSource=_raceDays;
                 MessageBox.Show($"Race Day has been created named by:"+Environment.NewLine+raceDay.Name);
-                TxtRaceDayName.Text = null;
+                TxtRaceDayName.Text = string.Empty;
             }
             catch (Exception ex)
             {

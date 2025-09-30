@@ -13,9 +13,9 @@ namespace HorseRacing
 {
     public partial class FrmCreateRaceCard : FrmBase
     {
-        private List<RaceCard> _raceCards;
+        private BindingList<RaceCard> _raceCards;
 
-        public FrmCreateRaceCard(List<Race> races, List<RaceDay> raceDays, List<RaceCard> raceCards)
+        public FrmCreateRaceCard(BindingList<Race> races, BindingList<RaceDay> raceDays, BindingList<RaceCard> raceCards)
         {
             InitializeComponent();
 
@@ -24,7 +24,7 @@ namespace HorseRacing
             {
                 CmbRaceDays.Items.Add(raceDay);
             }
-            _raceCards = raceCards;
+            _raceCards = new BindingList<RaceCard>(raceCards);
             dgvRaceCards.DataSource = raceCards;
 
         }
@@ -57,17 +57,17 @@ namespace HorseRacing
                         selectedRaceDay.RaceCards = new List<RaceCard>();
                     }
                     selectedRaceDay.RaceCards.Add(raceCard);
-                    dgvRaceCards.DataSource = null;
+
                     dgvRaceCards.DataSource = _raceCards;
                 }
                 _raceCards.Add(raceCard);
-                dgvRaceCards.DataSource = null;
+
                 dgvRaceCards.DataSource = _raceCards;
                 MessageBox.Show($"Racecard has been created named by:" + Environment.NewLine + raceCard.Name);
-                TxtRaceCardName.Text = "";
-                TxtRaceCardPlace.Text = "";
+                TxtRaceCardName.Text = string.Empty;
+                TxtRaceCardPlace.Text = string.Empty;
                 CmbRaceDays.SelectedItem = null;
-                
+
             }
             catch (Exception ex)
             {

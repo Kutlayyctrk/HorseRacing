@@ -13,8 +13,8 @@ namespace HorseRacing
 {
     public partial class FrmCreateRace : FrmBase
     {
-        private List<Race> _races = new List<Race>();
-        public FrmCreateRace(List<Horse> horses, List<RaceCard> raceCards, List<Race> races)
+        private BindingList<Race> _races;
+        public FrmCreateRace(BindingList<Horse> horses, BindingList<RaceCard> raceCards, BindingList<Race> races)
         {
             InitializeComponent();
            
@@ -27,7 +27,7 @@ namespace HorseRacing
             {
                 CmbRaceCard.Items.Add(raceCard);
             }
-            _races = races;
+            _races = new BindingList<Race>(races);
             dgvRaces.DataSource= _races;
         }
 
@@ -118,12 +118,12 @@ namespace HorseRacing
                     }
 
                     _races.Add(race);
-                    dgvRaces.DataSource = null;
+                    
                     dgvRaces.DataSource = _races;
 
-                    TxtRaceName.Text = "";
-                    CmbHorse.SelectedItem = null;
-                    CmbRaceCard.SelectedItem = null;
+                    TxtRaceName.Text = string.Empty;
+                    CmbHorse.SelectedItem = string.Empty;
+                    CmbRaceCard.SelectedItem = string.Empty;
                     LstSelectedHorse.Items.Clear();
 
                     MessageBox.Show($"Race has been created name by:" + Environment.NewLine + race.Name);

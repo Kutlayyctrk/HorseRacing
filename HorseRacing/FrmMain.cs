@@ -13,13 +13,13 @@ namespace HorseRacing
 {
     public partial class FrmMain : FrmBase
     {
-        
-        List<RaceCard> _raceCards = new List<RaceCard>();
-        List<Race> _races = new List<Race>();
-        List<Horse> _horses = new List<Horse>();
-        List<Jockey> _jockeys = new List<Jockey>();
-        List<RaceDay> _raceDays = new List<RaceDay>();
-        List<AllData> _allData = new List<AllData>();
+
+        BindingList<RaceCard> _raceCards = new BindingList<RaceCard>();
+        BindingList<Race> _races = new BindingList<Race>();
+        BindingList<Horse> _horses = new BindingList<Horse>();
+        BindingList<Jockey> _jockeys = new BindingList<Jockey>();
+        BindingList<RaceDay> _raceDays = new BindingList<RaceDay>();
+        BindingList<AllData> _allData = new BindingList<AllData>();
         public FrmMain()
         {
             InitializeComponent();

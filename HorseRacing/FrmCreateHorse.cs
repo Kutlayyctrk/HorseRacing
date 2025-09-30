@@ -13,8 +13,8 @@ namespace HorseRacing
 {
     public partial class FrmCreateHorse : FrmBase
     {
-        private List<Horse> _horses;
-        public FrmCreateHorse(List<Horse> horses, List<Jockey> jockeys)
+        private BindingList<Horse> _horses;
+        public FrmCreateHorse(BindingList<Horse> horses, BindingList<Jockey> jockeys)
         {
             InitializeComponent();
             
@@ -22,8 +22,8 @@ namespace HorseRacing
             {
                 CmbJockey.Items.Add(jockey);
             }
-            _horses = horses;
-            DgvHorses.DataSource = _horses;
+           _horses=new BindingList<Horse>(horses);
+            DgvHorses.DataSource =_horses;
 
 
         }
@@ -48,15 +48,15 @@ namespace HorseRacing
                 if (int.TryParse(TxtHorsaAge.Text, out int age))
                 {
                     Horse horse = new Horse(TxtHorseName.Text, age, TxtHorseRegion.Text, CmbJockey.SelectedItem as Jockey);
+                   
                     _horses.Add(horse);
-                    DgvHorses.DataSource = null;
                     DgvHorses.DataSource = _horses;
 
-                   
-                    TxtHorsaAge.Text = "";
-                    TxtHorseName.Text = "";
-                    TxtHorseRegion.Text = "";
-                    CmbJockey.SelectedItem = null;
+
+                    TxtHorsaAge.Text = string.Empty;
+                    TxtHorseName.Text = string.Empty ;
+                    TxtHorseRegion.Text =string.Empty ;
+                    CmbJockey.SelectedItem = string.Empty ;
                    
 
                     MessageBox.Show($"Horse has been created named by: {horse.Name}");

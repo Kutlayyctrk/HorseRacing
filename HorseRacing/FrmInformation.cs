@@ -13,21 +13,21 @@ namespace HorseRacing
 {
     public partial class FrmInformation : FrmBase
     {
-        private List<Horse> _horses;
-        private List<Race> _races;
-        private List<RaceCard> _raceCards;
-        private List<RaceDay> _raceDays;
-        private List<Jockey> _jockeys;
-        private List<AllData> _allData;
-        public FrmInformation(List<Jockey> jokeys, List<Horse> horses, List<Race> races, List<RaceCard> raceCards, List<RaceDay> raceDays, List<AllData> allDatas)
+        private BindingList<Horse> _horses;
+        private BindingList<Race> _races;
+        private BindingList<RaceCard> _raceCards;
+        private BindingList<RaceDay> _raceDays;
+        private BindingList<Jockey> _jockeys;
+        private BindingList<AllData> _allData;
+        public FrmInformation(BindingList<Jockey> jokeys, BindingList<Horse> horses, BindingList<Race> races, BindingList<RaceCard> raceCards, BindingList<RaceDay> raceDays, BindingList<AllData> allDatas)
         {
             InitializeComponent();
-            _jockeys = jokeys;
-            _horses = horses;
-            _races = races;
-            _raceCards = raceCards;
-            _raceDays = raceDays;
-            _allData = allDatas;
+            _jockeys = new BindingList<Jockey>(jokeys);
+            _horses = new BindingList<Horse>(horses);
+            _races = new BindingList<Race>(races);
+            _raceCards = new BindingList<RaceCard>(raceCards);
+            _raceDays = new BindingList<RaceDay>(raceDays);
+            _allData = new BindingList<AllData>(allDatas);
             DgvRaceDay.DataSource = raceDays;
             DgvRaceDay.CellClick += DgvRaceDay_CellClick;
             dgvRaceCard.CellClick += dgvRaceCard_CellClick;
@@ -47,7 +47,7 @@ namespace HorseRacing
 
             if (raceDay != null)
             {
-                _raceCards = raceDay.RaceCards;
+
                 dgvRaceCard.DataSource = _raceCards;
             }
 
@@ -62,7 +62,7 @@ namespace HorseRacing
             RaceCard raceCard = dgvRaceCard.Rows[e.RowIndex].DataBoundItem as RaceCard;
             if (raceCard != null)
             {
-                _races = raceCard.Races;
+
                 dgvRace.DataSource = _races;
             }
 
@@ -79,7 +79,7 @@ namespace HorseRacing
             Race race = dgvRace.Rows[e.RowIndex].DataBoundItem as Race;
             if (race != null)
             {
-                _horses = race.Horses;
+
                 dgvHorse.DataSource = _horses;
             }
 

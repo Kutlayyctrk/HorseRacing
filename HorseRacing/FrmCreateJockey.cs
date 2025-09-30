@@ -15,7 +15,7 @@ namespace HorseRacing
     public partial class FrmCreateJockey : FrmBase
     {
         private BindingList<Jockey> _jockeys;
-        public FrmCreateJockey(List<Jockey> jockeys)
+        public FrmCreateJockey(BindingList<Jockey> jockeys)
         {
             InitializeComponent();
             _jockeys = new BindingList<Jockey>(jockeys);
