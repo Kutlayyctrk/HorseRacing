@@ -75,5 +75,22 @@ namespace HorseRacing
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void FrmCreateRaceCard_Load(object sender, EventArgs e)
+        {
+            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
+            deleteButtonColumn.Name = "Delete";
+            deleteButtonColumn.HeaderText = "Delete";
+            deleteButtonColumn.Text = "Delete";
+            deleteButtonColumn.UseColumnTextForButtonValue = true;
+
+            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
+            editButtonColumn.Name = "Edit";
+            editButtonColumn.HeaderText = "Edit";
+            editButtonColumn.Text = "Edit";
+            editButtonColumn.UseColumnTextForButtonValue = true;
+            dgvRaceCards.Columns.Add(deleteButtonColumn);
+            dgvRaceCards.Columns.Add(editButtonColumn);
+        }
     }
 }

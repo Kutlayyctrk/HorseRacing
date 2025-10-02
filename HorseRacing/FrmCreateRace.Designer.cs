@@ -47,7 +47,7 @@
             this.TxtRaceName.Location = new System.Drawing.Point(139, 44);
             this.TxtRaceName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRaceName.Name = "TxtRaceName";
-            this.TxtRaceName.Size = new System.Drawing.Size(100, 22);
+            this.TxtRaceName.Size = new System.Drawing.Size(137, 22);
             this.TxtRaceName.TabIndex = 0;
             // 
             // label1
@@ -55,24 +55,24 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(33, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 16);
+            this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Name:";
+            this.label1.Text = "Name";
             // 
             // CmbHorse
             // 
             this.CmbHorse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbHorse.FormattingEnabled = true;
-            this.CmbHorse.Location = new System.Drawing.Point(139, 112);
+            this.CmbHorse.Location = new System.Drawing.Point(139, 75);
             this.CmbHorse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CmbHorse.Name = "CmbHorse";
-            this.CmbHorse.Size = new System.Drawing.Size(100, 24);
-            this.CmbHorse.TabIndex = 2;
+            this.CmbHorse.Size = new System.Drawing.Size(137, 24);
+            this.CmbHorse.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 114);
+            this.label2.Location = new System.Drawing.Point(33, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 16);
             this.label2.TabIndex = 1;
@@ -82,16 +82,16 @@
             // 
             this.CmbRaceCard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbRaceCard.FormattingEnabled = true;
-            this.CmbRaceCard.Location = new System.Drawing.Point(139, 175);
+            this.CmbRaceCard.Location = new System.Drawing.Point(139, 104);
             this.CmbRaceCard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CmbRaceCard.Name = "CmbRaceCard";
-            this.CmbRaceCard.Size = new System.Drawing.Size(100, 24);
+            this.CmbRaceCard.Size = new System.Drawing.Size(137, 24);
             this.CmbRaceCard.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 183);
+            this.label3.Location = new System.Drawing.Point(33, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 1;
@@ -99,22 +99,22 @@
             // 
             // BtnCreateRace
             // 
-            this.BtnCreateRace.Location = new System.Drawing.Point(139, 215);
+            this.BtnCreateRace.Location = new System.Drawing.Point(139, 161);
             this.BtnCreateRace.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCreateRace.Name = "BtnCreateRace";
-            this.BtnCreateRace.Size = new System.Drawing.Size(100, 37);
-            this.BtnCreateRace.TabIndex = 3;
+            this.BtnCreateRace.Size = new System.Drawing.Size(137, 37);
+            this.BtnCreateRace.TabIndex = 4;
             this.BtnCreateRace.Text = "Add Race";
             this.BtnCreateRace.UseVisualStyleBackColor = true;
             this.BtnCreateRace.Click += new System.EventHandler(this.BtnCreateRace_Click);
             // 
             // BtnAddHorse
             // 
-            this.BtnAddHorse.Location = new System.Drawing.Point(269, 107);
+            this.BtnAddHorse.Location = new System.Drawing.Point(285, 80);
             this.BtnAddHorse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnAddHorse.Name = "BtnAddHorse";
             this.BtnAddHorse.Size = new System.Drawing.Size(138, 48);
-            this.BtnAddHorse.TabIndex = 4;
+            this.BtnAddHorse.TabIndex = 3;
             this.BtnAddHorse.Text = "Add Horse To The Group";
             this.BtnAddHorse.UseVisualStyleBackColor = true;
             this.BtnAddHorse.Click += new System.EventHandler(this.BtnAddHorse_Click);
@@ -135,13 +135,16 @@
             this.BtnDeleteHorse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnDeleteHorse.Name = "BtnDeleteHorse";
             this.BtnDeleteHorse.Size = new System.Drawing.Size(129, 55);
-            this.BtnDeleteHorse.TabIndex = 4;
+            this.BtnDeleteHorse.TabIndex = 6;
             this.BtnDeleteHorse.Text = "Remove Horse From The Group";
             this.BtnDeleteHorse.UseVisualStyleBackColor = true;
             this.BtnDeleteHorse.Click += new System.EventHandler(this.BtnDeleteHorse_Click);
             // 
             // dgvRaces
             // 
+            this.dgvRaces.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvRaces.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRaces.Location = new System.Drawing.Point(568, 18);
             this.dgvRaces.Name = "dgvRaces";
@@ -169,6 +172,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmCreateRace";
             this.Text = "Races";
+            this.Load += new System.EventHandler(this.FrmCreateRace_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRaces)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -60,5 +60,23 @@ namespace HorseRacing
                 return;
             }
         }
+
+        private void FrmCreateRaceDay_Load(object sender, EventArgs e)
+        {
+            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
+            deleteButtonColumn.Name = "Delete";
+            deleteButtonColumn.HeaderText = "Delete";
+            deleteButtonColumn.Text = "Delete";
+            deleteButtonColumn.UseColumnTextForButtonValue = true;
+
+            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
+            editButtonColumn.Name = "Edit";
+            editButtonColumn.HeaderText = "Edit";
+            editButtonColumn.Text = "Edit";
+            editButtonColumn.UseColumnTextForButtonValue = true;
+
+            dgvRaceDays.Columns.Add(deleteButtonColumn);
+            dgvRaceDays.Columns.Add(editButtonColumn);
+        }
     }
 }

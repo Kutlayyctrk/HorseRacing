@@ -13,6 +13,7 @@ namespace HorseRacing.Entities
         {
             return Name;
         }
+        public Jockey() { }
         public Jockey(string name,int age)
         {
             Name = name;
@@ -24,6 +25,8 @@ namespace HorseRacing.Entities
         public string Name { get; set; }
 
         public int Age { get; set; }
+
+       
 
     }
 }

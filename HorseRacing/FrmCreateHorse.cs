@@ -79,6 +79,22 @@ namespace HorseRacing
             }
         }
 
+        private void FrmCreateHorse_Load(object sender, EventArgs e)
+        {
+            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
+            deleteButtonColumn.Name = "Delete";
+            deleteButtonColumn.HeaderText = "Delete";
+            deleteButtonColumn.Text = "Delete";
+            deleteButtonColumn.UseColumnTextForButtonValue = true;
 
+            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
+            editButtonColumn.Name = "Edit";
+            editButtonColumn.HeaderText = "Edit";
+            editButtonColumn.Text = "Edit";
+            editButtonColumn.UseColumnTextForButtonValue = true;
+            DgvHorses.Columns.Add(deleteButtonColumn);
+            DgvHorses.Columns.Add(editButtonColumn);
+           
+        }
     }
 }

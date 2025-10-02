@@ -14,12 +14,12 @@ namespace HorseRacing
     public partial class FrmMain : FrmBase
     {
 
-        BindingList<RaceCard> _raceCards = new BindingList<RaceCard>();
-        BindingList<Race> _races = new BindingList<Race>();
-        BindingList<Horse> _horses = new BindingList<Horse>();
-        BindingList<Jockey> _jockeys = new BindingList<Jockey>();
-        BindingList<RaceDay> _raceDays = new BindingList<RaceDay>();
-        BindingList<AllData> _allData = new BindingList<AllData>();
+        private BindingList<RaceCard> _raceCards = new BindingList<RaceCard>();
+        private BindingList<Race> _races = new BindingList<Race>();
+        private BindingList<Horse> _horses = new BindingList<Horse>();
+        private BindingList<Jockey> _jockeys = new BindingList<Jockey>();
+        private BindingList<RaceDay> _raceDays = new BindingList<RaceDay>();
+        private BindingList<AllData> _allData = new BindingList<AllData>();
         public FrmMain()
         {
             InitializeComponent();
@@ -67,7 +67,7 @@ namespace HorseRacing
 
         private void BtnCreateRaceCard_Click(object sender, EventArgs e)
         {
-            if (_raceDays.Count==0)
+            if (_raceDays.Count == 0)
             {
                 MessageBox.Show("You must create a Race Day first");
                 return;
@@ -90,7 +90,7 @@ namespace HorseRacing
 
         private void BtnInformation_Click(object sender, EventArgs e)
         {
-            FrmInformation i1 = new FrmInformation(_jockeys,_horses,_races,_raceCards,_raceDays,_allData);
+            FrmInformation i1 = new FrmInformation(_jockeys, _horses, _races, _raceCards, _raceDays, _allData);
             i1.Show();
         }
     }

@@ -39,15 +39,15 @@
             // 
             // TxtRaceDayName
             // 
-            this.TxtRaceDayName.Location = new System.Drawing.Point(135, 113);
+            this.TxtRaceDayName.Location = new System.Drawing.Point(118, 25);
             this.TxtRaceDayName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRaceDayName.Name = "TxtRaceDayName";
-            this.TxtRaceDayName.Size = new System.Drawing.Size(100, 22);
+            this.TxtRaceDayName.Size = new System.Drawing.Size(197, 22);
             this.TxtRaceDayName.TabIndex = 0;
             // 
             // DTPRaceDay
             // 
-            this.DTPRaceDay.Location = new System.Drawing.Point(135, 165);
+            this.DTPRaceDay.Location = new System.Drawing.Point(118, 58);
             this.DTPRaceDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DTPRaceDay.Name = "DTPRaceDay";
             this.DTPRaceDay.Size = new System.Drawing.Size(197, 22);
@@ -56,7 +56,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 116);
+            this.label1.Location = new System.Drawing.Point(12, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 3;
@@ -65,7 +65,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 165);
+            this.label2.Location = new System.Drawing.Point(12, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 16);
             this.label2.TabIndex = 3;
@@ -73,30 +73,33 @@
             // 
             // BtnCreateRaceDay
             // 
-            this.BtnCreateRaceDay.Location = new System.Drawing.Point(197, 233);
+            this.BtnCreateRaceDay.Location = new System.Drawing.Point(149, 99);
             this.BtnCreateRaceDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCreateRaceDay.Name = "BtnCreateRaceDay";
             this.BtnCreateRaceDay.Size = new System.Drawing.Size(133, 30);
-            this.BtnCreateRaceDay.TabIndex = 4;
+            this.BtnCreateRaceDay.TabIndex = 2;
             this.BtnCreateRaceDay.Text = "Add Race Day";
             this.BtnCreateRaceDay.UseVisualStyleBackColor = true;
             this.BtnCreateRaceDay.Click += new System.EventHandler(this.BtnCreateRaceDay_Click);
             // 
             // dgvRaceDays
             // 
+            this.dgvRaceDays.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvRaceDays.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRaceDays.Location = new System.Drawing.Point(391, 12);
             this.dgvRaceDays.Name = "dgvRaceDays";
             this.dgvRaceDays.RowHeadersWidth = 51;
             this.dgvRaceDays.RowTemplate.Height = 24;
-            this.dgvRaceDays.Size = new System.Drawing.Size(460, 426);
-            this.dgvRaceDays.TabIndex = 5;
+            this.dgvRaceDays.Size = new System.Drawing.Size(635, 426);
+            this.dgvRaceDays.TabIndex = 3;
             // 
             // FrmCreateRaceDay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 452);
+            this.ClientSize = new System.Drawing.Size(1030, 452);
             this.Controls.Add(this.dgvRaceDays);
             this.Controls.Add(this.BtnCreateRaceDay);
             this.Controls.Add(this.label2);
@@ -106,6 +109,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmCreateRaceDay";
             this.Text = "Race Days";
+            this.Load += new System.EventHandler(this.FrmCreateRaceDay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRaceDays)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -41,34 +41,34 @@
             // 
             // TxtRaceCardName
             // 
-            this.TxtRaceCardName.Location = new System.Drawing.Point(155, 78);
+            this.TxtRaceCardName.Location = new System.Drawing.Point(118, 9);
             this.TxtRaceCardName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRaceCardName.Name = "TxtRaceCardName";
-            this.TxtRaceCardName.Size = new System.Drawing.Size(100, 22);
+            this.TxtRaceCardName.Size = new System.Drawing.Size(165, 22);
             this.TxtRaceCardName.TabIndex = 0;
             // 
             // TxtRaceCardPlace
             // 
-            this.TxtRaceCardPlace.Location = new System.Drawing.Point(155, 118);
+            this.TxtRaceCardPlace.Location = new System.Drawing.Point(118, 49);
             this.TxtRaceCardPlace.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtRaceCardPlace.Name = "TxtRaceCardPlace";
-            this.TxtRaceCardPlace.Size = new System.Drawing.Size(100, 22);
-            this.TxtRaceCardPlace.TabIndex = 0;
+            this.TxtRaceCardPlace.Size = new System.Drawing.Size(165, 22);
+            this.TxtRaceCardPlace.TabIndex = 1;
             // 
             // CmbRaceDays
             // 
             this.CmbRaceDays.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbRaceDays.FormattingEnabled = true;
-            this.CmbRaceDays.Location = new System.Drawing.Point(155, 159);
+            this.CmbRaceDays.Location = new System.Drawing.Point(118, 90);
             this.CmbRaceDays.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CmbRaceDays.Name = "CmbRaceDays";
-            this.CmbRaceDays.Size = new System.Drawing.Size(100, 24);
+            this.CmbRaceDays.Size = new System.Drawing.Size(165, 24);
             this.CmbRaceDays.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 164);
+            this.label2.Location = new System.Drawing.Point(12, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 1;
@@ -77,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 81);
+            this.label3.Location = new System.Drawing.Point(12, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 1;
@@ -86,7 +86,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 123);
+            this.label4.Location = new System.Drawing.Point(12, 54);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 16);
             this.label4.TabIndex = 1;
@@ -94,10 +94,10 @@
             // 
             // BtnCreateRaceCard
             // 
-            this.BtnCreateRaceCard.Location = new System.Drawing.Point(155, 202);
+            this.BtnCreateRaceCard.Location = new System.Drawing.Point(118, 130);
             this.BtnCreateRaceCard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCreateRaceCard.Name = "BtnCreateRaceCard";
-            this.BtnCreateRaceCard.Size = new System.Drawing.Size(112, 41);
+            this.BtnCreateRaceCard.Size = new System.Drawing.Size(165, 41);
             this.BtnCreateRaceCard.TabIndex = 3;
             this.BtnCreateRaceCard.Text = "Add Bulletin";
             this.BtnCreateRaceCard.UseVisualStyleBackColor = true;
@@ -105,6 +105,9 @@
             // 
             // dgvRaceCards
             // 
+            this.dgvRaceCards.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvRaceCards.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRaceCards.Location = new System.Drawing.Point(300, 12);
             this.dgvRaceCards.Name = "dgvRaceCards";
@@ -129,6 +132,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmCreateRaceCard";
             this.Text = "RaceCards";
+            this.Load += new System.EventHandler(this.FrmCreateRaceCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRaceCards)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

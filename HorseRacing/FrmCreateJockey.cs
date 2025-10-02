@@ -14,41 +14,117 @@ namespace HorseRacing
 
     public partial class FrmCreateJockey : FrmBase
     {
+
         private BindingList<Jockey> _jockeys;
+
         public FrmCreateJockey(BindingList<Jockey> jockeys)
         {
             InitializeComponent();
-            _jockeys = new BindingList<Jockey>(jockeys);
+            _jockeys = jockeys;
+            dgvJockeys.AutoGenerateColumns = false;
+            GenerateDGVColumns();
             dgvJockeys.DataSource = _jockeys;
+            dgvJockeys.CellContentClick += dgvJockeys_CellContentClick;
+
+
         }
-        private void BtnCreateJockey_Click(object sender, EventArgs e)
+        // Aksiyon butonları(Delete Ve edit) dgv'nin otomatik satır yaratma özelliğini kapatıp manuel olarak ekledim. Sadece aksiyon butonlarını olusturup Id,Name,Age sütunlarını autogenerate'e bırakırsam manuel eklenecek aksiyon butonlarıyla otomatik eklenecek satırlar index içeren timing hatası veriyor buda aksiyon butonlarına tıklandıgında indexoutofrange hatası veriyorr 
+        public void GenerateDGVColumns()
         {
+
+            DataGridViewTextBoxColumn idColumn = new DataGridViewTextBoxColumn();
+            idColumn.DataPropertyName = "Id";
+            idColumn.HeaderText = "Id";
+            idColumn.Name = "Id";
+            idColumn.ReadOnly = true;
+            dgvJockeys.Columns.Add(idColumn);
+
+
+            DataGridViewTextBoxColumn nameColumn = new DataGridViewTextBoxColumn();
+            nameColumn.DataPropertyName = "Name";
+            nameColumn.HeaderText = "Name";
+            nameColumn.Name = "Name";
+            dgvJockeys.Columns.Add(nameColumn);
+
+
+            DataGridViewTextBoxColumn ageColumn = new DataGridViewTextBoxColumn();
+            ageColumn.DataPropertyName = "Age";
+            ageColumn.HeaderText = "Age";
+            ageColumn.Name = "Age";
+            dgvJockeys.Columns.Add(ageColumn);
+
+
+            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
+            editButtonColumn.Text = "Edit";
+            editButtonColumn.HeaderText = "Edit";
+            editButtonColumn.Name = "Edit";
+            editButtonColumn.UseColumnTextForButtonValue = true;
+            dgvJockeys.Columns.Add(editButtonColumn);
+
+
+            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
+            deleteButtonColumn.Text = "Delete";
+            deleteButtonColumn.HeaderText = "Delete";
+            deleteButtonColumn.Name = "Delete";
+            deleteButtonColumn.UseColumnTextForButtonValue = true;
+            dgvJockeys.Columns.Add(deleteButtonColumn);
+        }
+
+
+        private void BtnAddOrEdit_Click(object sender, EventArgs e)
+        {
+            FrmJockeyAddOrEdit f1 = new FrmJockeyAddOrEdit(_jockeys);
+            f1.ShowDialog();
+            dgvJockeys.Refresh();
+        }
+
+
+        private void dgvJockeys_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
             try
             {
-                if (string.IsNullOrWhiteSpace(TxtJockeyName.Text))
+
+                if (e.RowIndex < 0 || !(dgvJockeys.Columns[e.ColumnIndex] is DataGridViewButtonColumn))
                 {
-                    MessageBox.Show("Jockey name cannot be empty.");
                     return;
                 }
-                if (int.TryParse(TxtJockeyAge.Text, out int age))
+
+                Jockey selectedJockey = dgvJockeys.Rows[e.RowIndex].DataBoundItem as Jockey;
+
+                if (selectedJockey == null) return;
+
+                string columnName = dgvJockeys.Columns[e.ColumnIndex].Name;
+
+                if (columnName == "Delete")
                 {
-                    Jockey jockey = new Jockey(TxtJockeyName.Text, age);
-                    _jockeys.Add(jockey);
-                    MessageBox.Show($"Jockey has been created named by : "+Environment.NewLine +jockey.Name);
-                    TxtJockeyAge.Text = string.Empty;
-                    TxtJockeyName.Text = string.Empty;
-                    TxtJockeyName.Focus();
+
+                    DialogResult reply = MessageBox.Show(
+                        $"'Are you sure you want to delete the jockey named '{selectedJockey.Name}'?", "Delete Confirm", MessageBoxButtons.YesNo);
+
+                    if (reply == DialogResult.Yes)
+                    {
+                        _jockeys.Remove(selectedJockey);
+                        MessageBox.Show($"{selectedJockey.Name}' has been successfully deleted.", "Successful");
+                    }
                 }
-                else
+                else if (columnName == "Edit")
                 {
-                    MessageBox.Show("Jockey age must be a number!");
+                    FrmJockeyAddOrEdit editForm = new FrmJockeyAddOrEdit(_jockeys, selectedJockey);
+                    editForm.ShowDialog();
+                    dgvJockeys.Refresh();
+                    BtnAdd.Focus();
+
+
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                return;
+                MessageBox.Show("Hata oluştu: " + ex.Message);
             }
-        } 
+        }
+
+
     }
 }
+

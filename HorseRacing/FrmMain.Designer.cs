@@ -39,6 +39,7 @@
             // 
             // BtnCreateJockey
             // 
+            this.BtnCreateJockey.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnCreateJockey.Location = new System.Drawing.Point(45, 74);
             this.BtnCreateJockey.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCreateJockey.Name = "BtnCreateJockey";
@@ -50,63 +51,69 @@
             // 
             // BtnCreateRaceCard
             // 
+            this.BtnCreateRaceCard.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnCreateRaceCard.Location = new System.Drawing.Point(523, 74);
             this.BtnCreateRaceCard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCreateRaceCard.Name = "BtnCreateRaceCard";
             this.BtnCreateRaceCard.Size = new System.Drawing.Size(137, 65);
-            this.BtnCreateRaceCard.TabIndex = 0;
+            this.BtnCreateRaceCard.TabIndex = 3;
             this.BtnCreateRaceCard.Text = "Add Bulletin";
             this.BtnCreateRaceCard.UseVisualStyleBackColor = true;
             this.BtnCreateRaceCard.Click += new System.EventHandler(this.BtnCreateRaceCard_Click);
             // 
             // BtnCreateHorse
             // 
+            this.BtnCreateHorse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnCreateHorse.Location = new System.Drawing.Point(197, 74);
             this.BtnCreateHorse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCreateHorse.Name = "BtnCreateHorse";
             this.BtnCreateHorse.Size = new System.Drawing.Size(137, 65);
-            this.BtnCreateHorse.TabIndex = 0;
+            this.BtnCreateHorse.TabIndex = 1;
             this.BtnCreateHorse.Text = "Add Horse";
             this.BtnCreateHorse.UseVisualStyleBackColor = true;
             this.BtnCreateHorse.Click += new System.EventHandler(this.BtnCreateHorse_Click);
             // 
             // BtnCreateRace
             // 
+            this.BtnCreateRace.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnCreateRace.Location = new System.Drawing.Point(693, 74);
             this.BtnCreateRace.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCreateRace.Name = "BtnCreateRace";
             this.BtnCreateRace.Size = new System.Drawing.Size(137, 65);
-            this.BtnCreateRace.TabIndex = 0;
+            this.BtnCreateRace.TabIndex = 4;
             this.BtnCreateRace.Text = "Add Race";
             this.BtnCreateRace.UseVisualStyleBackColor = true;
             this.BtnCreateRace.Click += new System.EventHandler(this.BtnCreateRace_Click);
             // 
             // BtnCreateRaceDay
             // 
+            this.BtnCreateRaceDay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnCreateRaceDay.Location = new System.Drawing.Point(359, 74);
             this.BtnCreateRaceDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCreateRaceDay.Name = "BtnCreateRaceDay";
             this.BtnCreateRaceDay.Size = new System.Drawing.Size(137, 65);
-            this.BtnCreateRaceDay.TabIndex = 0;
+            this.BtnCreateRaceDay.TabIndex = 2;
             this.BtnCreateRaceDay.Text = "Add Race Day";
             this.BtnCreateRaceDay.UseVisualStyleBackColor = true;
             this.BtnCreateRaceDay.Click += new System.EventHandler(this.BtnCreateRaceDay_Click);
             // 
             // BtnInformation
             // 
+            this.BtnInformation.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnInformation.Location = new System.Drawing.Point(359, 159);
             this.BtnInformation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnInformation.Name = "BtnInformation";
             this.BtnInformation.Size = new System.Drawing.Size(137, 65);
-            this.BtnInformation.TabIndex = 1;
+            this.BtnInformation.TabIndex = 5;
             this.BtnInformation.Text = "Show Info";
             this.BtnInformation.UseVisualStyleBackColor = true;
             this.BtnInformation.Click += new System.EventHandler(this.BtnInformation_Click);
             // 
             // LblInfo
             // 
+            this.LblInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LblInfo.BackColor = System.Drawing.SystemColors.Info;
-            this.LblInfo.Location = new System.Drawing.Point(61, 235);
+            this.LblInfo.Location = new System.Drawing.Point(171, 239);
             this.LblInfo.Name = "LblInfo";
             this.LblInfo.Size = new System.Drawing.Size(533, 84);
             this.LblInfo.TabIndex = 2;

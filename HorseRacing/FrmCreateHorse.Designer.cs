@@ -46,23 +46,23 @@
             this.TxtHorseName.Location = new System.Drawing.Point(112, 18);
             this.TxtHorseName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtHorseName.Name = "TxtHorseName";
-            this.TxtHorseName.Size = new System.Drawing.Size(100, 22);
+            this.TxtHorseName.Size = new System.Drawing.Size(138, 22);
             this.TxtHorseName.TabIndex = 0;
             // 
             // TxtHorsaAge
             // 
-            this.TxtHorsaAge.Location = new System.Drawing.Point(112, 75);
+            this.TxtHorsaAge.Location = new System.Drawing.Point(112, 50);
             this.TxtHorsaAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtHorsaAge.Name = "TxtHorsaAge";
-            this.TxtHorsaAge.Size = new System.Drawing.Size(100, 22);
+            this.TxtHorsaAge.Size = new System.Drawing.Size(138, 22);
             this.TxtHorsaAge.TabIndex = 1;
             // 
             // TxtHorseRegion
             // 
-            this.TxtHorseRegion.Location = new System.Drawing.Point(112, 132);
+            this.TxtHorseRegion.Location = new System.Drawing.Point(112, 80);
             this.TxtHorseRegion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtHorseRegion.Name = "TxtHorseRegion";
-            this.TxtHorseRegion.Size = new System.Drawing.Size(100, 22);
+            this.TxtHorseRegion.Size = new System.Drawing.Size(138, 22);
             this.TxtHorseRegion.TabIndex = 2;
             // 
             // label1
@@ -70,23 +70,23 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 16);
+            this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Name:";
+            this.label1.Text = "Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 81);
+            this.label2.Location = new System.Drawing.Point(12, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 16);
+            this.label2.Size = new System.Drawing.Size(32, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Age:";
+            this.label2.Text = "Age";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 139);
+            this.label3.Location = new System.Drawing.Point(12, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 16);
             this.label3.TabIndex = 2;
@@ -94,10 +94,10 @@
             // 
             // BtnCreateHorse
             // 
-            this.BtnCreateHorse.Location = new System.Drawing.Point(123, 219);
+            this.BtnCreateHorse.Location = new System.Drawing.Point(112, 154);
             this.BtnCreateHorse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCreateHorse.Name = "BtnCreateHorse";
-            this.BtnCreateHorse.Size = new System.Drawing.Size(89, 34);
+            this.BtnCreateHorse.Size = new System.Drawing.Size(138, 34);
             this.BtnCreateHorse.TabIndex = 4;
             this.BtnCreateHorse.Text = "Add Horse";
             this.BtnCreateHorse.UseVisualStyleBackColor = true;
@@ -107,16 +107,16 @@
             // 
             this.CmbJockey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbJockey.FormattingEnabled = true;
-            this.CmbJockey.Location = new System.Drawing.Point(112, 175);
+            this.CmbJockey.Location = new System.Drawing.Point(112, 111);
             this.CmbJockey.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CmbJockey.Name = "CmbJockey";
-            this.CmbJockey.Size = new System.Drawing.Size(100, 24);
+            this.CmbJockey.Size = new System.Drawing.Size(138, 24);
             this.CmbJockey.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 180);
+            this.label4.Location = new System.Drawing.Point(12, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 16);
             this.label4.TabIndex = 2;
@@ -124,8 +124,11 @@
             // 
             // DgvHorses
             // 
+            this.DgvHorses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvHorses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvHorses.Location = new System.Drawing.Point(218, 18);
+            this.DgvHorses.Location = new System.Drawing.Point(354, 12);
             this.DgvHorses.Name = "DgvHorses";
             this.DgvHorses.RowHeadersWidth = 51;
             this.DgvHorses.RowTemplate.Height = 24;
@@ -136,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 450);
+            this.ClientSize = new System.Drawing.Size(1117, 502);
             this.Controls.Add(this.DgvHorses);
             this.Controls.Add(this.CmbJockey);
             this.Controls.Add(this.BtnCreateHorse);
@@ -150,6 +153,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmCreateHorse";
             this.Text = "Horses";
+            this.Load += new System.EventHandler(this.FrmCreateHorse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvHorses)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
