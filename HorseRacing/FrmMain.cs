@@ -27,7 +27,7 @@ namespace HorseRacing
 
         private void BtnCreateJockey_Click(object sender, EventArgs e)
         {
-            FrmCreateJockey c1 = new FrmCreateJockey(_jockeys);
+            FrmCreateJockey c1 = new FrmCreateJockey(_jockeys,_horses);
             c1.Show();
         }
 

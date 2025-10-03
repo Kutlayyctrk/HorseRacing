@@ -16,11 +16,13 @@ namespace HorseRacing
     {
 
         private BindingList<Jockey> _jockeys;
+        private BindingList<Horse> _horses;
 
-        public FrmCreateJockey(BindingList<Jockey> jockeys)
+        public FrmCreateJockey(BindingList<Jockey> jockeys,BindingList<Horse>horses)
         {
             InitializeComponent();
             _jockeys = jockeys;
+            _horses = horses;
             dgvJockeys.AutoGenerateColumns = false;
             GenerateDGVColumns();
             dgvJockeys.DataSource = _jockeys;
@@ -98,7 +100,13 @@ namespace HorseRacing
 
                 if (columnName == "Delete")
                 {
+                    bool isJockeyAssignedToHorse=_horses.Any(h=>h.Jockey == selectedJockey); //Silinecek jokeyin herhangi bir At nesnesinde atamasının yapılıp yapılmadıgını kontrol ediyoruz.
+                    if(isJockeyAssignedToHorse)
+                    {
+                        MessageBox.Show($"Jockey '{selectedJockey.Name}' is currently assigned to horses and cannot be deleted.", "Deletion blocked");
+                        return;
 
+                    }
                     DialogResult reply = MessageBox.Show(
                         $"'Are you sure you want to delete the jockey named '{selectedJockey.Name}'?", "Delete Confirm", MessageBoxButtons.YesNo);
 
