@@ -13,6 +13,7 @@ namespace HorseRacing.Entities
         {
             return Name;
         }
+        public Horse() { }
         public Horse(string name,int age, string region, Jockey jokey)
         {
             Name = name;
@@ -28,6 +29,7 @@ namespace HorseRacing.Entities
         public int Age { get; set; }
         public string Region { get; set; }
         public Jockey Jockey { get; set; } // atın üzerinde ki jokeyi direkt jokey class'ından alıyorz
+        public Race Race { get; set; }
 
     }
 }

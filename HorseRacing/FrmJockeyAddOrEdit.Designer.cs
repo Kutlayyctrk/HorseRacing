@@ -37,6 +37,7 @@
             // 
             // BtnSave
             // 
+            this.BtnSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnSave.Location = new System.Drawing.Point(81, 117);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(106, 23);
@@ -46,6 +47,7 @@
             // 
             // TxtJockeyName
             // 
+            this.TxtJockeyName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtJockeyName.Location = new System.Drawing.Point(81, 34);
             this.TxtJockeyName.Name = "TxtJockeyName";
             this.TxtJockeyName.Size = new System.Drawing.Size(148, 22);
@@ -53,6 +55,7 @@
             // 
             // TxtJockeyAge
             // 
+            this.TxtJockeyAge.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtJockeyAge.Location = new System.Drawing.Point(81, 80);
             this.TxtJockeyAge.Name = "TxtJockeyAge";
             this.TxtJockeyAge.Size = new System.Drawing.Size(148, 22);
@@ -60,6 +63,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(31, 40);
             this.label1.Name = "label1";
@@ -69,6 +73,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(31, 86);
             this.label2.Name = "label2";
@@ -88,7 +93,6 @@
             this.Controls.Add(this.BtnSave);
             this.Name = "FrmJockeyAddOrEdit";
             this.Text = "JockeyAddOrEdit";
-           
             this.ResumeLayout(false);
             this.PerformLayout();
 

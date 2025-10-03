@@ -19,64 +19,111 @@ namespace HorseRacing
         {
             InitializeComponent();
 
-            _raceDays = new BindingList<RaceDay>(raceDays);
-            _raceCards = new BindingList<RaceCard>(raceCards);
+            _raceDays = raceDays;
+            _raceCards = raceCards;
+            dgvRaceDays.AutoGenerateColumns = false;
+            GenerateDGVColumns();
             dgvRaceDays.DataSource = _raceDays;
-            
-            
+            dgvRaceDays.CellClick += dgvRaceDays_CellClick;
+
         }
 
+        public void GenerateDGVColumns()
+        {
 
+            DataGridViewTextBoxColumn idColumn = new DataGridViewTextBoxColumn();
+            idColumn.DataPropertyName = "Id";
+            idColumn.HeaderText = "Id";
+            idColumn.Name = "Id";
+            idColumn.ReadOnly = true;
+            dgvRaceDays.Columns.Add(idColumn);
+
+
+            DataGridViewTextBoxColumn nameColumn = new DataGridViewTextBoxColumn();
+            nameColumn.DataPropertyName = "Name";
+            nameColumn.HeaderText = "Name";
+            nameColumn.Name = "Name";
+            dgvRaceDays.Columns.Add(nameColumn);
+
+
+            DataGridViewTextBoxColumn dateColumn = new DataGridViewTextBoxColumn();
+            dateColumn.DataPropertyName = "Date";
+            dateColumn.HeaderText = "Date";
+            dateColumn.Name = "Date";
+            dgvRaceDays.Columns.Add(dateColumn);
+
+
+            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
+            editButtonColumn.Text = "Edit";
+            editButtonColumn.HeaderText = "Edit";
+            editButtonColumn.Name = "Edit";
+            editButtonColumn.UseColumnTextForButtonValue = true;
+            dgvRaceDays.Columns.Add(editButtonColumn);
+
+
+            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
+            deleteButtonColumn.Text = "Delete";
+            deleteButtonColumn.HeaderText = "Delete";
+            deleteButtonColumn.Name = "Delete";
+            deleteButtonColumn.UseColumnTextForButtonValue = true;
+            dgvRaceDays.Columns.Add(deleteButtonColumn);
+        }
 
 
 
         private void BtnCreateRaceDay_Click(object sender, EventArgs e)
         {
+            FrmRaceDayAddOrEdit f1 = new FrmRaceDayAddOrEdit(_raceDays);
+            f1.ShowDialog();
+            dgvRaceDays.Refresh();
+        }
+
+        private void dgvRaceDays_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             try
             {
-
-                if (string.IsNullOrWhiteSpace(TxtRaceDayName.Text))
+                if (e.RowIndex < 0 || !(dgvRaceDays.Columns[e.ColumnIndex] is DataGridViewButtonColumn))
                 {
-                    MessageBox.Show("RaceDay name cannot be Empty!");
                     return;
                 }
-                RaceDay raceDay = new RaceDay();
-                {
-                    raceDay.Name = TxtRaceDayName.Text;
-                    raceDay.Date = DTPRaceDay.Value;
 
+                RaceDay selectedRaceDay = dgvRaceDays.Rows[e.RowIndex].DataBoundItem as RaceDay;
+
+                if (selectedRaceDay == null) return;
+
+                string columnName = dgvRaceDays.Columns[e.ColumnIndex].Name;
+
+                if (columnName == "Delete")
+                {
+                    bool isRaceDayAssignedToRaceCard = _raceCards.Any(r => r.raceDay == selectedRaceDay);
+                    if (isRaceDayAssignedToRaceCard)
+                    {
+                        MessageBox.Show($"RaceDay {selectedRaceDay.Name} is ccurrently assigned to RaceCard and cannot be deleted", "Deletion Blocked");
+                        return;
+                    }
+                    DialogResult reply = MessageBox.Show
+                        ($"Are you sure you want to delete the RaceCard named '{selectedRaceDay.Name}'?", "Delete Confirm", MessageBoxButtons.YesNo);
+                    if (reply == DialogResult.Yes)
+                    {
+                        _raceDays.Remove(selectedRaceDay);
+                        MessageBox.Show($"'{selectedRaceDay.Name}' has been succesfully deleted.", "Succesfuly");
+                    }
 
                 }
-                _raceDays.Add(raceDay);
-                
-                dgvRaceDays.DataSource=_raceDays;
-                MessageBox.Show($"Race Day has been created named by:"+Environment.NewLine+raceDay.Name);
-                TxtRaceDayName.Text = string.Empty;
+                else if (columnName == "Edit")
+                {
+                    FrmRaceDayAddOrEdit f1 = new FrmRaceDayAddOrEdit(_raceDays, selectedRaceDay);
+                    f1.ShowDialog();
+
+                    BtnCreateRaceDay.Focus();
+                }
+
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
 
-                 MessageBox.Show(ex.Message);
-                return;
             }
-        }
-
-        private void FrmCreateRaceDay_Load(object sender, EventArgs e)
-        {
-            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
-            deleteButtonColumn.Name = "Delete";
-            deleteButtonColumn.HeaderText = "Delete";
-            deleteButtonColumn.Text = "Delete";
-            deleteButtonColumn.UseColumnTextForButtonValue = true;
-
-            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
-            editButtonColumn.Name = "Edit";
-            editButtonColumn.HeaderText = "Edit";
-            editButtonColumn.Text = "Edit";
-            editButtonColumn.UseColumnTextForButtonValue = true;
-
-            dgvRaceDays.Columns.Add(deleteButtonColumn);
-            dgvRaceDays.Columns.Add(editButtonColumn);
         }
     }
 }

@@ -94,11 +94,23 @@
     <Compile Include="Entities\Jockey.cs" />
     <Compile Include="Entities\Race.cs" />
     <Compile Include="Entities\RaceCard.cs" />
+    <Compile Include="FrmHorseAddOrEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHorseAddOrEdit.Designer.cs">
+      <DependentUpon>FrmHorseAddOrEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInformation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmInformation.Designer.cs">
       <DependentUpon>FrmInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRaceDayAddOrEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRaceDayAddOrEdit.Designer.cs">
+      <DependentUpon>FrmRaceDayAddOrEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IBaseEntites.cs" />
     <Compile Include="FrmMain.cs">
@@ -133,6 +145,9 @@
     <EmbeddedResource Include="FrmCreateRaceDay.resx">
       <DependentUpon>FrmCreateRaceDay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmHorseAddOrEdit.resx">
+      <DependentUpon>FrmHorseAddOrEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInformation.resx">
       <DependentUpon>FrmInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmJockeyAddOrEdit.resx">
       <DependentUpon>FrmJockeyAddOrEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRaceDayAddOrEdit.resx">
+      <DependentUpon>FrmRaceDayAddOrEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

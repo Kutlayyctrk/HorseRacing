@@ -15,7 +15,7 @@ namespace HorseRacing
     {
         private BindingList<Jockey> _jockeys;
         private Jockey _currentJockey;          
-        public FrmJockeyAddOrEdit(BindingList<Jockey>jockeys)
+        public FrmJockeyAddOrEdit(BindingList<Jockey>jockeys)//İlk ekleme yaparken acılacak form constructor'ı
         {
             InitializeComponent();
             _jockeys = jockeys;
@@ -31,7 +31,6 @@ namespace HorseRacing
             _currentJockey=editJockey;
             Text=$"Edit To {editJockey.Name}";
             BtnSave.Text = "Edit";
-
             JockeyData();
         }
 
@@ -67,7 +66,7 @@ namespace HorseRacing
                 {
                     Jockey jockey=new Jockey(_currentJockey.Name,_currentJockey.Age);
                     _jockeys.Add(jockey);
-                    MessageBox.Show($"Jockey has been successfully updated: {_currentJockey.Name}");
+                    MessageBox.Show($"Jockey has been succesfully created: {_currentJockey.Name}");
                     TxtJockeyAge.Text=string.Empty;
                     TxtJockeyName.Text=string.Empty;
                     TxtJockeyName.Focus();

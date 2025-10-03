@@ -40,7 +40,7 @@ namespace HorseRacing
             }
             else
             {
-                FrmCreateHorse c1 = new FrmCreateHorse(_horses, _jockeys);
+                FrmCreateHorse c1 = new FrmCreateHorse(_horses, _jockeys,_races);
                 c1.Show();
             }
         }

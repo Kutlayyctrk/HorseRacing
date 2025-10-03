@@ -7,17 +7,24 @@ using System.Threading.Tasks;
 
 namespace HorseRacing.Entities
 {
-    public class RaceDay :IBaseEntites
+    public class RaceDay : IBaseEntites
     {
         public override string ToString()
         {
             return Name;
         }
-        public RaceDay()
+        public RaceDay(string name, DateTime date)
         {
             Id = ++counter;
+            Name = name;
+            Date = date;
+            
+
         }
-        public static int counter= 0;
+
+       public RaceDay() { }
+
+        public static int counter = 0;
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime Date { get; set; } //tarih

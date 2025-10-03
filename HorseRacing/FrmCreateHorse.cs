@@ -14,87 +14,135 @@ namespace HorseRacing
     public partial class FrmCreateHorse : FrmBase
     {
         private BindingList<Horse> _horses;
-        public FrmCreateHorse(BindingList<Horse> horses, BindingList<Jockey> jockeys)
+        private BindingList<Jockey> _jockeys;
+        private BindingList<Race> _races;
+        public FrmCreateHorse(BindingList<Horse> horses, BindingList<Jockey> jockeys, BindingList<Race> races)
         {
             InitializeComponent();
-            
-            foreach (Jockey jockey in jockeys)
-            {
-                CmbJockey.Items.Add(jockey);
-            }
-           _horses=new BindingList<Horse>(horses);
-            DgvHorses.DataSource =_horses;
+            _horses = new BindingList<Horse>(horses);
+            _horses = horses;
+            _jockeys = jockeys;
+            _races = races;
+            DgvHorses.AutoGenerateColumns = false;
+            GenerateDGVColumns();
+            DgvHorses.DataSource = _horses;
+            DgvHorses.CellContentClick += DgvHorses_CellContentClick;
+
+
 
 
         }
+        public void GenerateDGVColumns()
+        {
+
+            DataGridViewTextBoxColumn idColumn = new DataGridViewTextBoxColumn();
+            idColumn.DataPropertyName = "Id";
+            idColumn.HeaderText = "Id";
+            idColumn.Name = "Id";
+            idColumn.ReadOnly = true;
+            DgvHorses.Columns.Add(idColumn);
+
+
+            DataGridViewTextBoxColumn nameColumn = new DataGridViewTextBoxColumn();
+            nameColumn.DataPropertyName = "Name";
+            nameColumn.HeaderText = "Name";
+            nameColumn.Name = "Name";
+            DgvHorses.Columns.Add(nameColumn);
+
+
+            DataGridViewTextBoxColumn ageColumn = new DataGridViewTextBoxColumn();
+            ageColumn.DataPropertyName = "Age";
+            ageColumn.HeaderText = "Age";
+            ageColumn.Name = "Age";
+            DgvHorses.Columns.Add(ageColumn);
+
+            DataGridViewTextBoxColumn regionColumn = new DataGridViewTextBoxColumn();
+            regionColumn.DataPropertyName = "Region";
+            regionColumn.HeaderText = "Region";
+            regionColumn.Name = "Region";
+            DgvHorses.Columns.Add(regionColumn);
+
+            DataGridViewTextBoxColumn jockeyColumn = new DataGridViewTextBoxColumn();
+            jockeyColumn.DataPropertyName = "Jockey";
+            jockeyColumn.HeaderText = "Jockey";
+            jockeyColumn.Name = "Jockey";
+            DgvHorses.Columns.Add(jockeyColumn);
+
+            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
+            editButtonColumn.Text = "Edit";
+            editButtonColumn.HeaderText = "Edit";
+            editButtonColumn.Name = "Edit";
+            editButtonColumn.UseColumnTextForButtonValue = true;
+            DgvHorses.Columns.Add(editButtonColumn);
+
+
+            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
+            deleteButtonColumn.Text = "Delete";
+            deleteButtonColumn.HeaderText = "Delete";
+            deleteButtonColumn.Name = "Delete";
+            deleteButtonColumn.UseColumnTextForButtonValue = true;
+            DgvHorses.Columns.Add(deleteButtonColumn);
+        }
+
 
         private void BtnCreateHorse_Click(object sender, EventArgs e)
         {
-            try
-            {
-                
-                if (string.IsNullOrWhiteSpace(TxtHorseName.Text) || string.IsNullOrWhiteSpace(TxtHorseRegion.Text))
-                {
-                    MessageBox.Show("Required fields must be filled out!");
-                    return; 
-                }
-
-                if (CmbJockey.SelectedItem == null)
-                {
-                    MessageBox.Show("Required fields must be filled out!");
-                    return ;
-                }
-                
-                if (int.TryParse(TxtHorsaAge.Text, out int age))
-                {
-                    Horse horse = new Horse(TxtHorseName.Text, age, TxtHorseRegion.Text, CmbJockey.SelectedItem as Jockey);
-                   
-                    _horses.Add(horse);
-                    DgvHorses.DataSource = _horses;
-
-
-                    TxtHorsaAge.Text = string.Empty;
-                    TxtHorseName.Text = string.Empty ;
-                    TxtHorseRegion.Text =string.Empty ;
-                    CmbJockey.SelectedItem = string.Empty ;
-                   
-
-                    MessageBox.Show($"Horse has been created named by: {horse.Name}");
-                }
-                else
-                {
-                   
-                    MessageBox.Show("Please enter a valid age.");
-                    return; 
-                }
-
-               
-                
-
-            }
-            catch (Exception ex)
-            {
-               
-                MessageBox.Show(ex.Message);
-            }
+            FrmHorseAddOrEdit f1 = new FrmHorseAddOrEdit(_jockeys, _horses);
+            f1.ShowDialog();
+            DgvHorses.Refresh();
         }
 
         private void FrmCreateHorse_Load(object sender, EventArgs e)
         {
-            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
-            deleteButtonColumn.Name = "Delete";
-            deleteButtonColumn.HeaderText = "Delete";
-            deleteButtonColumn.Text = "Delete";
-            deleteButtonColumn.UseColumnTextForButtonValue = true;
 
-            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
-            editButtonColumn.Name = "Edit";
-            editButtonColumn.HeaderText = "Edit";
-            editButtonColumn.Text = "Edit";
-            editButtonColumn.UseColumnTextForButtonValue = true;
-            DgvHorses.Columns.Add(deleteButtonColumn);
-            DgvHorses.Columns.Add(editButtonColumn);
-           
+
+        }
+
+        private void DgvHorses_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex < 0 || !(DgvHorses.Columns[e.ColumnIndex] is DataGridViewButtonColumn))
+                {
+                    return;
+                }
+                Horse selectedHorse = DgvHorses.Rows[e.RowIndex].DataBoundItem as Horse;
+
+                if (selectedHorse == null) return;
+
+                string columnName = DgvHorses.Columns[e.ColumnIndex].Name;
+                if (columnName == "Delete")
+                {
+                    bool isHorseAssignedToRace = _races.Any(r => r.Horses.Contains(selectedHorse)); //Silinecek atın herhangi bir yarışta olup olmadıgını kontrol ediyoruz.
+                    if (isHorseAssignedToRace)
+                    {
+                        MessageBox.Show($"Horse {selectedHorse.Name} is currently assigned to race and cannot be deleted.", "Deletion Blocked");
+                        return;
+                    }
+                    DialogResult reply = MessageBox.Show
+                        ($"Are you sure you want to delete the horse named '{selectedHorse.Name}'?", "Delete Confirm", MessageBoxButtons.YesNo);
+                    if (reply == DialogResult.Yes)
+                    {
+                        _horses.Remove(selectedHorse);
+                        MessageBox.Show($"'{selectedHorse.Name}' has been succesfully deleted", "Succesfully");
+                    }
+                }
+                else if (columnName == "Edit")
+                {
+                    FrmHorseAddOrEdit editForm = new FrmHorseAddOrEdit(_jockeys, _races, _horses, selectedHorse);
+                    editForm.ShowDialog();
+                    DgvHorses.Refresh();
+                    BtnCreateHorse.Focus();
+                }
+
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
